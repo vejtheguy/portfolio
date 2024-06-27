@@ -1,0 +1,25 @@
+{
+  "name": "virgil-portfolio",
+  "version": "1.0.0",
+  "description": "A personal portfolio showcasing my journey from glassblowing to full stack web development. Featuring my skills in responsive web design, JavaScript frameworks, and creative CSS styling, along with sample projects and a contact section for collaboration opportunities.",
+  "scripts": {
+    "build-css": "tailwindcss -i ./src/input.css -o ./public/style.css",
+    "watch-css": "tailwindcss -i ./src/input.css -o ./public/style.css --watch",
+    "serve": "live-server public",
+    "sync": "browser-sync start --server public --files 'public/*.html, public/*.css'",
+    "dev": "concurrently \"npm run watch-css\" \"npm run sync\""
+  },
+  "keywords": [],
+  "author": "Virgil Jones",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.19",
+    "browser-sync": "^3.0.2",
+    "concurrently": "^8.2.2",
+    "tailwindcss": "^3.4.4"
+  },
+  "dependencies": {
+    "live-server": "^1.2.2",
+    "postcss-cli": "^11.0.0"
+  }
+}

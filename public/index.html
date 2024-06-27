@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Virgil Jones - Web Development Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="//unpkg.com/alpinejs" defer></script>
+  </head>
+  <body class="bg-pastel-pink font-custom text-pastel-gray tracking-widest">
+    <!-- Main navigation -->
+    <header class="sticky top-0 z-50">
+      <nav
+        class="container flex items-center justify-between py-6 bg-pastel-pink"
+        x-data="{ open: true }"
+      >
+        <a href="#" class="-m-1.5 p-1.5">
+          <span class="uppercase text-xl tracking-widest">Virgil Jones</span>
+        </a>
+        <div class="flex lg:hidden">
+          <button
+            @click="open = ! open"
+            type="button"
+            class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              class="h-6 w-6"
+              :class="open ? 'hidden' : 'block'"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              />
+            </svg>
+          </button>
+        </div>
+        <div class="hidden lg:flex lg:gap-x-10">
+          <a href="#" class="text-md">Resume</a>
+          <a href="#projects" class="text-md">Projects</a>
+          <a href="#" class="text-md">About Me</a>
+          <a href="#" class="text-md">Skills</a>
+          <a href="#" class="text-md">Contact</a>
+        </div>
+        <!-- Mobile menu, show/hide based on menu open state. -->
+        <div x-show="open" class="lg:hidden">
+          <!-- Background backdrop, show/hide based on slide-over state. -->
+          <div class="fixed inset-0 z-10"></div>
+          <div
+            class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
+          >
+            <div class="flex items-center justify-between">
+              <a href="#" class="-m-1.5 p-1.5">
+                <span class="uppercase text-xl tracking-widest"
+                  >Virgil Jones</span
+                >
+              </a>
+              <button
+                type="button"
+                @click="open = ! open"
+                class="-m-2.5 rounded-md p-2.5 text-gray-700"
+              >
+                <span class="sr-only">Close menu</span>
+                <svg
+                  class="h-6 w-6"
+                  :class="open ? 'block' : 'hidden'"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="mt-6 flow-root">
+              <div class="-my-6">
+                <div class="space-y-2 py-6">
+                  <a
+                    href="#"
+                    class="-mx-3 block rounded-lg px-3 py-2 font-medium leading-7 text-gray-900 hover:bg-gray-50"
+                    >Resume</a
+                  >
+                  <a
+                    href="#projects"
+                    class="-mx-3 block rounded-lg px-3 py-2 font-medium leading-7 text-gray-900 hover:bg-gray-50"
+                    >Projects</a
+                  >
+                  <a
+                    href="#"
+                    class="-mx-3 block rounded-lg px-3 py-2 text-base font-medium leading-7 text-gray-900 hover:bg-gray-50"
+                    >About Me</a
+                  >
+                  <a
+                    href="#"
+                    class="-mx-3 block rounded-lg px-3 py-2 text-base font-medium leading-7 text-gray-900 hover:bg-gray-50"
+                    >Skills</a
+                  >
+                  <a
+                    href="#"
+                    class="-mx-3 block rounded-lg px-3 py-2 text-base font-medium leading-7 text-gray-900 hover:bg-gray-50"
+                    >Contact</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- Main content section -->
+    <main class="container mt-16">
+      <!-- Hero section -->
+      <div class="relative mr-2">
+        <span class="custom-shadow bg-pastel-purple-shadow"></span>
+        <div
+          class="flex flex-col lg:flex-row justify-center items-center gap-14 rounded-large bg-pastel-purple px-16 pt-16 pb-20 relative z-10 drop-shadow-sm"
+        >
+          <div class="lg:w-1/2 w-full">
+            <p
+              class="text-left lg:text-right text-xl xl:text-2xl font-extralight mr-3"
+            >
+              hi my name is
+            </p>
+            <h1
+              class="uppercase text-left lg:text-right my-4 tracking-widest text-3xl lg:text-5xl xl:text-7xl"
+            >
+              Virgil Jones
+            </h1>
+            <p
+              class="text-left lg:text-right text-xl xl:text-2xl font-extralight mr-3"
+            >
+              aspiring full stack developer
+            </p>
+          </div>
+          <div class="lg:w-1/2 w-full relative">
+            <span class="custom-shadow bg-pastel-purple-shadow"></span>
+            <img
+              src="./imgs/virgil-jones-portfolio-img-1.jpg"
+              alt="Photo of Virgil holding his dog Payton."
+              class="custom-img"
+            />
+          </div>
+        </div>
+      </div>
+      <!-- Project section -->
+      <div id="projects" class="my-36 mr-2 anchor-offset">
+        <h2 class="uppercase text-5xl mb-28">Projects</h2>
+        <div class="flex justify-between gap-28 flex-col lg:flex-row">
+          <!-- Project wrapper | Hotel Serenity -->
+          <div class="w-full lg:w-1/3 flex flex-col">
+            <div class="relative mb-12">
+              <img
+                src="./imgs/hotel-serenity-demo-site.jpg"
+                alt="Screenshot of demo website called Hotel Serenity"
+                class="custom-img object-cover aspect-square object-left"
+              />
+              <span class="custom-shadow bg-pastel-orange"></span>
+            </div>
+            <h3 class="text-xl font-medium">Hotel Serenity - Canva</h3>
+            <p class="text-lg font-light my-4">
+              A sample layout for a luxurious hotel website, designed in Canva.
+            </p>
+            <a
+              href="https://hotelserenityblueprint.my.canva.site/"
+              target="_blank"
+              class="text-sm font-bold mt-auto text-pastel-hot-pink"
+              >view demo site</a
+            >
+          </div>
+          <!-- Project wrapper | Pawsome Adoptions -->
+          <div class="w-full lg:w-1/3 flex flex-col">
+            <div class="relative mb-12">
+              <img
+                src="./imgs/pawsome-adoption-demo-site.jpg"
+                alt="Screenshot of demo website called Pawsome Adoptions"
+                class="custom-img object-cover aspect-square object-left"
+              />
+              <span class="custom-shadow bg-pastel-blue"></span>
+            </div>
+            <h3 class="text-xl font-medium">Pawsome Adoptions - ReactJS</h3>
+            <p class="text-lg font-light my-4">
+              A sample dog adoption website built with ReactJS and API
+              integration.
+            </p>
+            <a
+              href="https://vejtheguy.github.io/pawsome-adoptions/"
+              target="_blank"
+              class="text-sm font-bold mt-auto text-pastel-hot-pink"
+              >view demo site</a
+            >
+          </div>
+          <!-- Project wrapper | Odin's Recipe Realm-->
+          <div class="w-full lg:w-1/3 flex flex-col">
+            <div class="relative mb-12">
+              <img
+                src="./imgs/recipe-realm-demo-site.jpg"
+                alt="Screenshot of demo website called Odin's Recipe Realm"
+                class="custom-img object-cover aspect-square object-left"
+              />
+              <span class="custom-shadow bg-pastel-green-shadow"></span>
+            </div>
+            <h3 class="text-xl font-medium">Recipe Realm - HTML/CSS</h3>
+            <p class="text-lg font-light my-4">
+              A sample recipe website designed using HTML and CSS.
+            </p>
+            <a
+              href="https://vejtheguy.github.io/odin-recipes/"
+              target="_blank"
+              class="text-sm font-bold mt-auto text-pastel-hot-pink"
+              >view demo site</a
+            >
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
