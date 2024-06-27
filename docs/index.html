@@ -44,9 +44,9 @@
         <div class="hidden lg:flex lg:gap-x-10">
           <a href="#" class="text-md">Resume</a>
           <a href="#projects" class="text-md">Projects</a>
-          <a href="#" class="text-md">About Me</a>
-          <a href="#" class="text-md">Skills</a>
-          <a href="#" class="text-md">Contact</a>
+          <a href="#about" class="text-md">About Me</a>
+          <a href="#skills" class="text-md">Skills</a>
+          <a href="#contact" class="text-md">Contact</a>
         </div>
         <!-- Mobile menu, show/hide based on menu open state. -->
         <div x-show="open" class="lg:hidden">
@@ -89,6 +89,7 @@
                 <div class="space-y-2 py-6">
                   <a
                     href="#"
+                    @click="open = ! open"
                     class="-mx-3 block rounded-lg px-3 py-2 font-medium leading-7 text-gray-900 hover:bg-gray-50"
                     >Resume</a
                   >
@@ -99,17 +100,20 @@
                     >Projects</a
                   >
                   <a
-                    href="#"
+                    href="#about"
+                    @click="open = ! open"
                     class="-mx-3 block rounded-lg px-3 py-2 text-base font-medium leading-7 text-gray-900 hover:bg-gray-50"
                     >About Me</a
                   >
                   <a
-                    href="#"
+                    href="#skills"
+                    @click="open = ! open"
                     class="-mx-3 block rounded-lg px-3 py-2 text-base font-medium leading-7 text-gray-900 hover:bg-gray-50"
                     >Skills</a
                   >
                   <a
-                    href="#"
+                    href="#contact"
+                    @click="open = ! open"
                     class="-mx-3 block rounded-lg px-3 py-2 text-base font-medium leading-7 text-gray-900 hover:bg-gray-50"
                     >Contact</a
                   >
@@ -149,14 +153,14 @@
             <span class="custom-shadow bg-pastel-purple-shadow"></span>
             <img
               src="./imgs/virgil-jones-portfolio-img-1.jpg"
-              alt="Photo of Virgil holding his dog Payton."
+              alt="Photo of Virgil holding his dog Payton"
               class="custom-img"
             />
           </div>
         </div>
       </div>
       <!-- Project section -->
-      <div id="projects" class="my-36 mr-2 anchor-offset">
+      <div id="projects" class="mt-40 mr-2 anchor-offset">
         <h2 class="uppercase text-5xl mb-28">Projects</h2>
         <div class="flex justify-between gap-28 flex-col lg:flex-row">
           <!-- Project wrapper | Hotel Serenity -->
@@ -188,7 +192,7 @@
                 alt="Screenshot of demo website called Pawsome Adoptions"
                 class="custom-img object-cover aspect-square object-left"
               />
-              <span class="custom-shadow bg-pastel-blue"></span>
+              <span class="custom-shadow bg-pastel-blue-shadow"></span>
             </div>
             <h3 class="text-xl font-medium">Pawsome Adoptions - ReactJS</h3>
             <p class="text-lg font-light my-4">
@@ -222,6 +226,50 @@
               class="text-sm font-bold mt-auto text-pastel-hot-pink"
               >view demo site</a
             >
+          </div>
+        </div>
+      </div>
+      <!-- About me section -->
+      <div id="about" class="mt-16 mr-2 anchor-offset">
+        <h2 class="uppercase text-5xl mb-28">About Me</h2>
+        <div class="relative mr-2">
+          <span class="custom-shadow bg-pastel-blue-shadow"></span>
+          <div
+            class="flex flex-col lg:flex-row justify-center items-center gap-12 lg:gap-20 rounded-large bg-pastel-blue px-8 pt-8 pb-12 lg:px-16 lg:pt-16 lg:pb-20 relative z-10 drop-shadow-sm"
+          >
+            <div class="lg:w-1/2 w-full relative">
+              <span class="custom-shadow bg-pastel-blue-shadow"></span>
+              <img
+                src="./imgs/virgil-jones-glassblowing.jpg"
+                alt="Photo of Virgil glassblowing making a glass goblet"
+                class="custom-img object-cover aspect-auto lg:aspect-square"
+              />
+            </div>
+            <div class="lg:w-1/2 w-full flex flex-col gap-6 lg:gap-10">
+              <p
+                class="leading-8 xl:leading-9 text-left text-xl xl:text-2xl font-extralight"
+              >
+                I'm a <span class="font-normal">former glassblower</span> turned
+                <span class="font-normal">computer science student</span>. My
+                passion is to
+                <span class="font-normal">create web applications</span> that
+                provide easy <span class="font-normal">user experiences</span>.
+              </p>
+              <p
+                class="leading-8 xl:leading-9 text-left text-xl xl:text-2xl font-extralight"
+              >
+                When I'm not coding, you'll find me
+                <span class="font-normal">gaming</span> or watching
+                <span class="font-normal">horror films</span> with my friends. I
+                also enjoy
+                <span class="font-normal">fire-related hobbies</span> and
+                crafting with my hands, including
+                <span class="font-normal">woodworking</span>,
+                <span class="font-normal">knife making</span>,
+                <span class="font-normal">silversmithing</span>, and
+                <span class="font-normal">glassblowing</span>.
+              </p>
+            </div>
           </div>
         </div>
       </div>

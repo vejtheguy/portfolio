@@ -10,7 +10,8 @@ module.exports = {
         "pastel-purple": "#FAE7FF",
         "pastel-purple-shadow": "#DEC9F9",
         "pastel-orange": "#FDC4AC",
-        "pastel-blue": "#B2D9F7",
+        "pastel-blue": "#E8FAFF",
+        "pastel-blue-shadow": "#B2D9F7",
         "pastel-green-shadow": "#BFF19E",
         "pastel-pink": "#FFF6F6",
         "pastel-hot-pink": "#E380FF",
@@ -31,9 +32,6 @@ module.exports = {
         md: "768px",
         lg: "1024px",
         xl: "1400px",
-      },
-      spacing: {
-        "header-offset": "200px", // Adjust based on the height of your header
       },
       borderRadius: {
         large: "2rem",
