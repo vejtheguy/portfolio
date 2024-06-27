@@ -653,10 +653,6 @@ video {
   margin: -0.625rem;
 }
 
-.m-6{
-  margin: 1.5rem;
-}
-
 .-mx-3{
   margin-left: -0.75rem;
   margin-right: -0.75rem;
@@ -724,20 +720,45 @@ video {
   display: none;
 }
 
-.aspect-square{
-  aspect-ratio: 1 / 1;
-}
-
 .aspect-auto{
   aspect-ratio: auto;
+}
+
+.aspect-square{
+  aspect-ratio: 1 / 1;
 }
 
 .h-6{
   height: 1.5rem;
 }
 
-.h-full{
-  height: 100%;
+.h-fit{
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.h-\[400px\]{
+  height: 400px;
+}
+
+.h-2\/3{
+  height: 66.666667%;
+}
+
+.h-1\/2{
+  height: 50%;
+}
+
+.h-\[200px\]{
+  height: 200px;
+}
+
+.h-\[500px\]{
+  height: 500px;
+}
+
+.max-h-96{
+  max-height: 24rem;
 }
 
 .w-6{
@@ -807,6 +828,11 @@ video {
   background-color: rgb(232 250 255 / var(--tw-bg-opacity));
 }
 
+.bg-pastel-blue-shadow{
+  --tw-bg-opacity: 1;
+  background-color: rgb(178 217 247 / var(--tw-bg-opacity));
+}
+
 .bg-pastel-green-shadow{
   --tw-bg-opacity: 1;
   background-color: rgb(191 241 158 / var(--tw-bg-opacity));
@@ -837,11 +863,6 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-pastel-blue-shadow{
-  --tw-bg-opacity: 1;
-  background-color: rgb(178 217 247 / var(--tw-bg-opacity));
-}
-
 .object-cover{
   -o-object-fit: cover;
      object-fit: cover;
@@ -866,10 +887,6 @@ video {
 
 .p-2\.5{
   padding: 0.625rem;
-}
-
-.p-6{
-  padding: 1.5rem;
 }
 
 .px-3{
@@ -921,11 +938,6 @@ video {
 .text-5xl{
   font-size: 3rem;
   line-height: 1;
-}
-
-.text-base{
-  font-size: 1rem;
-  line-height: 1.5rem;
 }
 
 .text-lg{
@@ -982,11 +994,6 @@ video {
 .text-gray-700{
   --tw-text-opacity: 1;
   color: rgb(55 65 81 / var(--tw-text-opacity));
-}
-
-.text-gray-900{
-  --tw-text-opacity: 1;
-  color: rgb(17 24 39 / var(--tw-text-opacity));
 }
 
 .text-pastel-gray{
@@ -1073,6 +1080,10 @@ html {
     aspect-ratio: 1 / 1;
   }
 
+  .lg\:h-\[400px\]{
+    height: 400px;
+  }
+
   .lg\:w-1\/2{
     width: 50%;
   }
@@ -1107,6 +1118,11 @@ html {
     padding-right: 4rem;
   }
 
+  .lg\:px-20{
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+
   .lg\:pb-20{
     padding-bottom: 5rem;
   }
@@ -1126,10 +1142,6 @@ html {
 }
 
 @media (min-width: 1400px){
-  .xl\:aspect-square{
-    aspect-ratio: 1 / 1;
-  }
-
   .xl\:text-2xl{
     font-size: 1.5rem;
     line-height: 2rem;
@@ -1138,6 +1150,11 @@ html {
   .xl\:text-7xl{
     font-size: 4.5rem;
     line-height: 1;
+  }
+
+  .xl\:text-xl{
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 
   .xl\:leading-9{
