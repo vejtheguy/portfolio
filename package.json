@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "A personal portfolio showcasing my journey from glassblowing to full stack web development. Featuring my skills in responsive web design, JavaScript frameworks, and creative CSS styling, along with sample projects and a contact section for collaboration opportunities.",
   "scripts": {
-    "build-css": "tailwindcss -i ./src/input.css -o ./public/style.css",
-    "watch-css": "tailwindcss -i ./src/input.css -o ./public/style.css --watch",
-    "serve": "live-server public",
-    "sync": "browser-sync start --server public --files 'public/*.html, public/*.css'",
+    "build-css": "tailwindcss -i ./src/input.css -o ./docs/style.css",
+    "watch-css": "tailwindcss -i ./src/input.css -o ./docs/style.css --watch",
+    "serve": "live-server docs",
+    "sync": "browser-sync start --server docs --files 'docs/*.html, docs/*.css'",
     "dev": "concurrently \"npm run watch-css\" \"npm run sync\""
   },
   "keywords": [],
