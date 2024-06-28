@@ -356,6 +356,64 @@
           </div>
         </div>
       </div>
+      <!-- Get in contact section -->
+      <div id="contact" class="mt-16 mr-2 anchor-offset">
+        <h2 class="uppercase text-5xl mb-28">Get in Contact</h2>
+        <div class="flex flex-col lg:flex-row justify-center gap-20">
+          <div class="lg:w-1/2 w-full flex flex-col gap-6 lg:gap-10">
+            <p
+              class="leading-8 xl:leading-9 text-left lg:text-right text-xl xl:text-2xl font-extralight"
+            >
+              <span class="font-normal">Feel free to connect!</span> Find more
+              of me on <span class="font-normal">social media</span> or
+              <span class="font-normal">contact me directly</span>. I'm always
+              excited for <span class="font-normal">new opportunities</span>,
+              <span class="font-normal">projects</span>, and
+              <span class="font-normal">collaborations</span>.
+            </p>
+          </div>
+          <form
+            class="lg:w-1/2 w-full flex flex-col"
+            action="https://formsubmit.co/vejtheguy48@gmail.com"
+            method="post"
+          >
+            <label for="name" class="mb-2">Name: </label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="jane doe"
+              class="mb-8"
+            />
+            <label for="name" class="mb-2">Email: </label>
+            <input
+              type="email"
+              name="email"
+              placeholder="email address"
+              class="mb-8"
+            />
+            <label for="name" class="mb-2">Message: </label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="write message here"
+              class="w-full mb-8"
+            ></textarea>
+            <input
+              type="hidden"
+              name="_subject"
+              value="Contact submission from portfolio website!"
+            />
+            <input
+              type="hidden"
+              name="_next"
+              value="https://vejtheguy.github.io/portfolio/pages/thank-you.html"
+            />
+            <input type="hidden" name="_template" value="box" />
+            <input type="submit" value="Send" class="text-right" />
+          </form>
+        </div>
+      </div>
     </main>
   </body>
 </html>
