@@ -576,9 +576,9 @@ video {
   }
 }
 
-@media (min-width: 1024px){
+@media (min-width: 1200px){
   .container{
-    max-width: 1024px;
+    max-width: 1200px;
   }
 }
 
@@ -724,8 +724,32 @@ video {
   aspect-ratio: 1 / 1;
 }
 
+.aspect-auto{
+  aspect-ratio: auto;
+}
+
+.aspect-video{
+  aspect-ratio: 16 / 9;
+}
+
 .h-6{
   height: 1.5rem;
+}
+
+.h-full{
+  height: 100%;
+}
+
+.h-\[400px\]{
+  height: 400px;
+}
+
+.h-\[300px\]{
+  height: 300px;
+}
+
+.h-\[350px\]{
+  height: 350px;
 }
 
 .w-6{
@@ -740,8 +764,16 @@ video {
   flex-direction: column;
 }
 
+.items-start{
+  align-items: flex-start;
+}
+
 .items-center{
   align-items: center;
+}
+
+.justify-start{
+  justify-content: flex-start;
 }
 
 .justify-center{
@@ -754,6 +786,14 @@ video {
 
 .gap-12{
   gap: 3rem;
+}
+
+.gap-16{
+  gap: 4rem;
+}
+
+.gap-20{
+  gap: 5rem;
 }
 
 .gap-28{
@@ -800,6 +840,11 @@ video {
   background-color: rgb(181 235 249 / var(--tw-bg-opacity));
 }
 
+.bg-pastel-green{
+  --tw-bg-opacity: 1;
+  background-color: rgb(231 255 234 / var(--tw-bg-opacity));
+}
+
 .bg-pastel-green-shadow{
   --tw-bg-opacity: 1;
   background-color: rgb(186 245 192 / var(--tw-bg-opacity));
@@ -830,6 +875,11 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-pastel-orange-shadow{
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 198 168 / var(--tw-bg-opacity));
+}
+
 .object-cover{
   -o-object-fit: cover;
      object-fit: cover;
@@ -854,6 +904,10 @@ video {
 
 .p-2\.5{
   padding: 0.625rem;
+}
+
+.p-8{
+  padding: 2rem;
 }
 
 .px-3{
@@ -1034,7 +1088,7 @@ html {
   }
 }
 
-@media (min-width: 1024px){
+@media (min-width: 1200px){
   .lg\:flex{
     display: flex;
   }
@@ -1043,8 +1097,32 @@ html {
     display: none;
   }
 
+  .lg\:aspect-auto{
+    aspect-ratio: auto;
+  }
+
   .lg\:h-\[400px\]{
     height: 400px;
+  }
+
+  .lg\:h-full{
+    height: 100%;
+  }
+
+  .lg\:h-\[300px\]{
+    height: 300px;
+  }
+
+  .lg\:h-\[200px\]{
+    height: 200px;
+  }
+
+  .lg\:h-\[250px\]{
+    height: 250px;
+  }
+
+  .lg\:h-\[225px\]{
+    height: 225px;
   }
 
   .lg\:w-1\/2{
@@ -1053,6 +1131,10 @@ html {
 
   .lg\:w-1\/3{
     width: 33.333333%;
+  }
+
+  .lg\:w-full{
+    width: 100%;
   }
 
   .lg\:flex-row{
@@ -1108,6 +1190,16 @@ html {
   .xl\:text-7xl{
     font-size: 4.5rem;
     line-height: 1;
+  }
+
+  .xl\:text-lg{
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  .xl\:text-xl{
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 
   .xl\:leading-9{
