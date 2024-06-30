@@ -405,7 +405,7 @@
                 id="name"
                 required
                 placeholder="Jane Smith"
-                class="relative w-full h-12 px-4 bg-pastel-blue text-lg"
+                class="relative w-full h-12 px-4 bg-pastel-blue text-lg outline-pastel-hot-pink"
               />
             </div>
             <label
@@ -424,11 +424,18 @@
                 name="email"
                 required
                 placeholder="jane.smith@example.com"
-                class="relative w-full h-12 px-4 bg-pastel-blue text-lg"
+                class="relative w-full h-12 px-4 bg-pastel-blue text-lg outline-pastel-hot-pink"
               />
             </div>
-            <label for="name" class="mb-2 text-lg">Message: </label>
-            <div class="relative h-32 mb-8 mr-2">
+            <label
+              for="name"
+              class="mb-2 text-lg flex justify-between items-end"
+              >Message:<span
+                class="text-pastel-hot-pink font-medium text-xs mr-2"
+                >required*</span
+              ></label
+            >
+            <div class="relative h-36 mb-8 mr-2">
               <span
                 class="w-full h-full absolute -right-3 -bottom-3 drop-shadow bg-pastel-blue-shadow"
               ></span>
@@ -436,7 +443,8 @@
                 id="message"
                 name="message"
                 placeholder="Type your message here..."
-                class="relative w-full max-h-32 min-h-32 p-4 bg-pastel-blue text-lg"
+                required
+                class="relative w-full max-h-36 min-h-36 p-4 bg-pastel-blue text-lg outline-pastel-hot-pink"
               ></textarea>
             </div>
             <input
@@ -452,7 +460,8 @@
             />
             <button
               type="submit"
-              class="rounded-full relative w-1/4 mr-2 self-end bg-pastel-green px-4 py-3 text-xl font-extralight shadow-sm hover:bg-pastel-purple after:content-[''] after:rounded-full after:w-full after:h-full after:-z-10 after:absolute after:-right-2 after:-bottom-2 after:bg-pastel-green-shadow after:hover:bg-pastel-purple-shadow"
+              data-callback="onSubmit"
+              class="rounded-full relative w-1/4 mr-2 self-end bg-pastel-green p-4 text-xl font-extralight shadow-sm hover:bg-pastel-purple transition duration-300 after:transition after:duration-300 after:content-[''] after:rounded-full after:w-full after:h-full after:-z-10 after:absolute after:-right-3 after:-bottom-3 after:bg-pastel-green-shadow after:hover:bg-pastel-purple-shadow"
             >
               send
             </button>
