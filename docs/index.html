@@ -359,7 +359,7 @@
       <!-- Get in contact section -->
       <div id="contact" class="mt-16 mr-2 anchor-offset">
         <h2 class="uppercase text-5xl mb-28">Get in Contact</h2>
-        <div class="flex flex-col lg:flex-row justify-center gap-20">
+        <div class="flex flex-col lg:flex-row gap-20">
           <div class="lg:w-1/2 w-full flex flex-col gap-6 lg:gap-10">
             <p
               class="leading-8 xl:leading-9 text-left lg:text-right text-xl xl:text-2xl font-extralight"
@@ -374,46 +374,97 @@
           </div>
           <form
             class="lg:w-1/2 w-full flex flex-col"
-            action="https://formsubmit.co/vejtheguy48@gmail.com"
+            action="https://api.web3forms.com/submit"
             method="post"
           >
-            <label for="name" class="mb-2">Name: </label>
-            <input
-              type="text"
-              name="name"
-              id="name"
-              placeholder="jane doe"
-              class="mb-8"
-            />
-            <label for="name" class="mb-2">Email: </label>
-            <input
-              type="email"
-              name="email"
-              placeholder="email address"
-              class="mb-8"
-            />
-            <label for="name" class="mb-2">Message: </label>
-            <textarea
-              id="message"
-              name="message"
-              placeholder="write message here"
-              class="w-full mb-8"
-            ></textarea>
             <input
               type="hidden"
-              name="_subject"
-              value="Contact submission from portfolio website!"
+              name="access_key"
+              value="cce666be-fc14-4151-a24b-678d5f16b4b6"
             />
             <input
               type="hidden"
-              name="_next"
+              name="subject"
+              value="Portfolio Website Contact Submission"
+            />
+            <input type="hidden" name="from_name" value="Contact.Portfolio" />
+            <label
+              for="name"
+              class="mb-2 text-lg flex justify-between items-end"
+              >Name:<span class="text-pastel-hot-pink font-medium text-xs mr-2"
+                >required*</span
+              >
+            </label>
+            <div class="relative h-12 mb-8 mr-2">
+              <span
+                class="w-full h-full absolute -right-3 -bottom-3 drop-shadow bg-pastel-blue-shadow"
+              ></span>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                required
+                placeholder="Jane Smith"
+                class="relative w-full h-12 px-4 bg-pastel-blue text-lg"
+              />
+            </div>
+            <label
+              for="name"
+              class="mb-2 text-lg flex justify-between items-end"
+              >Email:<span class="text-pastel-hot-pink font-medium text-xs mr-2"
+                >required*</span
+              ></label
+            >
+            <div class="relative h-12 mb-8 mr-2">
+              <span
+                class="w-full h-full absolute -right-3 -bottom-3 drop-shadow bg-pastel-blue-shadow"
+              ></span>
+              <input
+                type="email"
+                name="email"
+                required
+                placeholder="jane.smith@example.com"
+                class="relative w-full h-12 px-4 bg-pastel-blue text-lg"
+              />
+            </div>
+            <label for="name" class="mb-2 text-lg">Message: </label>
+            <div class="relative h-32 mb-8 mr-2">
+              <span
+                class="w-full h-full absolute -right-3 -bottom-3 drop-shadow bg-pastel-blue-shadow"
+              ></span>
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Type your message here..."
+                class="relative w-full max-h-32 min-h-32 p-4 bg-pastel-blue text-lg"
+              ></textarea>
+            </div>
+            <input
+              type="hidden"
+              name="redirect"
               value="https://vejtheguy.github.io/portfolio/pages/thank-you.html"
             />
-            <input type="hidden" name="_template" value="box" />
-            <input type="submit" value="Send" class="text-right" />
+            <input
+              type="checkbox"
+              name="botcheck"
+              id="botcheck"
+              class="hidden"
+            />
+            <button
+              type="submit"
+              class="rounded-full relative w-1/4 mr-2 self-end bg-pastel-green px-4 py-3 text-xl font-extralight shadow-sm hover:bg-pastel-purple after:content-[''] after:rounded-full after:w-full after:h-full after:-z-10 after:absolute after:-right-2 after:-bottom-2 after:bg-pastel-green-shadow after:hover:bg-pastel-purple-shadow"
+            >
+              send
+            </button>
           </form>
         </div>
       </div>
     </main>
+    <script>
+      window.onload = function () {
+        // Reset the form fields when the page loads
+        document.getElementById("form").reset();
+      };
+    </script>
   </body>
 </html>
