@@ -490,6 +490,53 @@
         </div>
       </div>
     </main>
+    <!-- Footer -->
+    <footer
+      class="mt-20 mb-52 container"
+      x-data="{ year: new Date().getFullYear() }"
+    >
+      <span class="w-full block h-[1px] bg-gray-400"></span>
+      <div
+        class="flex flex-col lg:flex-row justify-between items-stat lg:items-center gap-8 mt-4"
+      >
+        <div>
+          <p class="text-lg font-light">
+            &copy; <span x-text="year"></span> Virgil Jones
+          </p>
+          <p class="text-lg font-light">All rights reserved</p>
+        </div>
+        <div class="flex gap-2">
+          <a href="https://github.com/vejtheguy" target="_blank">
+            <i
+              class="fa-brands fa-github fa-2xl text-gray-500 hover:text-pastel-hot-pink transition cursor-pointer"
+            ></i>
+          </a>
+          <a href="https://codepen.io/vejtheguy" target="_blank"
+            ><i
+              class="fa-brands fa-codepen fa-2xl text-gray-500 hover:text-pastel-hot-pink transition cursor-pointer"
+            ></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/virgil-elliot-jones/"
+            target="_blank"
+          >
+            <i
+              class="fa-brands fa-linkedin-in fa-2xl text-gray-500 hover:text-pastel-hot-pink transition cursor-pointer"
+            ></i>
+          </a>
+          <a href="https://twitter.com/aworthlessgamer" target="_blank">
+            <i
+              class="fa-brands fa-x-twitter fa-2xl text-gray-500 hover:text-pastel-hot-pink transition cursor-pointer"
+            ></i>
+          </a>
+          <a href="https://instagram.com/vejtheguy" target="_blank">
+            <i
+              class="fa-brands fa-instagram fa-2xl text-gray-500 hover:text-pastel-hot-pink transition cursor-pointer"
+            ></i>
+          </a>
+        </div>
+      </div>
+    </footer>
     <script>
       window.onload = function () {
         // Reset the form fields when the page loads
