@@ -6,6 +6,10 @@
     <title>Virgil Jones - Web Development Portfolio</title>
     <link rel="stylesheet" href="style.css" />
     <script src="//unpkg.com/alpinejs" defer></script>
+    <script
+      src="https://kit.fontawesome.com/77835667ac.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body class="bg-pastel-pink font-custom text-pastel-gray tracking-widest">
     <!-- Main navigation -->
@@ -14,7 +18,7 @@
         class="container flex items-center justify-between py-6 bg-pastel-pink"
         x-data="{ open: false }"
       >
-        <a href="#" class="-m-1.5 p-1.5">
+        <a href="#" class="-m-1.5 p-1.5 hover:text-pastel-hot-pink transition">
           <span class="uppercase text-xl tracking-widest">Virgil Jones</span>
         </a>
         <div class="flex lg:hidden">
@@ -42,11 +46,27 @@
           </button>
         </div>
         <div class="hidden lg:flex lg:gap-x-10">
-          <a href="#" class="text-md">Resume</a>
-          <a href="#projects" class="text-md">Projects</a>
-          <a href="#about" class="text-md">About Me</a>
-          <a href="#skills" class="text-md">Skills</a>
-          <a href="#contact" class="text-md">Contact</a>
+          <a href="#" class="text-md hover:text-pastel-hot-pink transition"
+            >Resume</a
+          >
+          <a
+            href="#projects"
+            class="text-md hover:text-pastel-hot-pink transition"
+            >Projects</a
+          >
+          <a href="#about" class="text-md hover:text-pastel-hot-pink transition"
+            >About Me</a
+          >
+          <a
+            href="#skills"
+            class="text-md hover:text-pastel-hot-pink transition"
+            >Skills</a
+          >
+          <a
+            href="#contact"
+            class="text-md hover:text-pastel-hot-pink transition"
+            >Contact</a
+          >
         </div>
         <!-- Mobile menu, show/hide based on menu open state. -->
         <div x-show="open" class="lg:hidden">
@@ -461,7 +481,7 @@
             <button
               type="submit"
               data-callback="onSubmit"
-              class="rounded-full relative w-1/4 mr-2 self-end bg-pastel-green p-4 text-xl font-extralight shadow-sm hover:bg-pastel-purple transition duration-300 after:transition after:duration-300 after:content-[''] after:rounded-full after:w-full after:h-full after:-z-10 after:absolute after:-right-3 after:-bottom-3 after:bg-pastel-green-shadow after:hover:bg-pastel-purple-shadow"
+              class="rounded-full relative w-1/4 mr-2 self-end bg-pastel-green p-4 text-xl font-light shadow-sm hover:bg-pastel-purple transition duration-300 after:transition after:duration-300 after:content-[''] after:rounded-full after:w-full after:h-full after:-z-10 after:absolute after:-right-3 after:-bottom-3 after:bg-pastel-green-shadow after:hover:bg-pastel-purple-shadow"
             >
               send
             </button>
