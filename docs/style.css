@@ -1541,6 +1541,10 @@ html {
     margin-top: 9rem;
   }
 
+  .lg\:mt-4{
+    margin-top: 1rem;
+  }
+
   .lg\:flex{
     display: flex;
   }
@@ -1583,6 +1587,10 @@ html {
 
   .lg\:gap-20{
     gap: 5rem;
+  }
+
+  .lg\:gap-2{
+    gap: 0.5rem;
   }
 
   .lg\:gap-x-10{
