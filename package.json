@@ -6,7 +6,7 @@
     "build-css": "tailwindcss -i ./src/input.css -o ./docs/style.css",
     "watch-css": "tailwindcss -i ./src/input.css -o ./docs/style.css --watch",
     "serve": "live-server docs",
-    "sync": "browser-sync start --server docs --files 'docs/*.html, docs/*.css'",
+    "sync": "browser-sync start --server docs --files 'docs/*.html, docs/*.css, docs/pages/*.html'",
     "dev": "concurrently \"npm run watch-css\" \"npm run sync\""
   },
   "keywords": [],

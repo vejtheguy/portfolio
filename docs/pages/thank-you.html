@@ -20,7 +20,10 @@
         class="container flex items-center justify-between py-6 bg-pastel-pink"
         x-data="{ open: false }"
       >
-        <a href="#" class="-m-1.5 p-1.5 hover:text-pastel-hot-pink transition">
+        <a
+          href="../index.html"
+          class="-m-1.5 p-1.5 hover:text-pastel-hot-pink transition"
+        >
           <span class="uppercase text-xl tracking-widest">Virgil Jones</span>
         </a>
         <div class="flex lg:hidden">
@@ -48,7 +51,9 @@
           </button>
         </div>
         <div class="hidden lg:flex lg:gap-x-10">
-          <a href="#" class="text-md hover:text-pastel-hot-pink transition"
+          <a
+            href="./resume.html"
+            class="text-md hover:text-pastel-hot-pink transition"
             >Resume</a
           >
           <a
@@ -80,7 +85,11 @@
             class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
           >
             <div class="flex items-center justify-between">
-              <a href="#" class="-m-1.5 p-1.5" @click="open = ! open">
+              <a
+                href="../index.html"
+                class="-m-1.5 p-1.5"
+                @click="open = ! open"
+              >
                 <span class="uppercase text-xl tracking-widest"
                   >Virgil Jones</span
                 >
@@ -112,31 +121,31 @@
               <div class="-my-6">
                 <div class="space-y-2 py-6">
                   <a
-                    href="#"
+                    href="./resume.html"
                     @click="open = ! open"
                     class="-mx-3 block rounded-lg px-3 py-2 font-medium leading-7 hover:bg-gray-50"
                     >Resume</a
                   >
                   <a
-                    href="#projects"
+                    href="../index.html#projects"
                     @click="open = ! open"
                     class="-mx-3 block rounded-lg px-3 py-2 font-medium leading-7 hover:bg-gray-50"
                     >Projects</a
                   >
                   <a
-                    href="#skills"
+                    href="../index.html#skills"
                     @click="open = ! open"
                     class="-mx-3 block rounded-lg px-3 py-2 font-medium leading-7 hover:bg-gray-50"
                     >Skills</a
                   >
                   <a
-                    href="#about"
+                    href="../index.html#about"
                     @click="open = ! open"
                     class="-mx-3 block rounded-lg px-3 py-2 font-medium leading-7 hover:bg-gray-50"
                     >About Me</a
                   >
                   <a
-                    href="#contact"
+                    href="../index.html#contact"
                     @click="open = ! open"
                     class="-mx-3 block rounded-lg px-3 py-2 font-medium leading-7 hover:bg-gray-50"
                     >Contact</a
