@@ -16,7 +16,7 @@ module.exports = {
         "pastel-green": "#E7FFEA",
         "pastel-green-shadow": "#BAF5C0",
         "pastel-yellow": "#FFFCD3",
-        "pastel-yellow-shadow": "#FFFC79",
+        "pastel-yellow-shadow": "#FBF79F",
         "pastel-pink": "#FFF6F6",
         "pastel-hot-pink": "#E380FF",
         "pastel-gray": "#343434",

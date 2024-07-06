@@ -1014,7 +1014,7 @@ video {
 
 .bg-pastel-yellow-shadow{
   --tw-bg-opacity: 1;
-  background-color: rgb(255 252 121 / var(--tw-bg-opacity));
+  background-color: rgb(251 247 159 / var(--tw-bg-opacity));
 }
 
 .bg-white{
@@ -1267,10 +1267,6 @@ video {
   transition-duration: 700ms;
 }
 
-.duration-500{
-  transition-duration: 500ms;
-}
-
 * {
   padding: 0;
   margin: 0;
@@ -1381,11 +1377,6 @@ li::before {
 .after\:duration-300::after{
   content: var(--tw-content);
   transition-duration: 300ms;
-}
-
-.after\:duration-500::after{
-  content: var(--tw-content);
-  transition-duration: 500ms;
 }
 
 .after\:content-\[\'\'\]::after{
