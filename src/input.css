@@ -346,7 +346,7 @@ li::before {
   }
 }
 
-li {
+.stars li {
   position: absolute;
   list-style-type: none;
   width: 10px;
@@ -354,63 +354,63 @@ li {
   border-radius: 50%;
   filter: blur(4px);
 }
-li:nth-child(1) {
+.stars li:nth-child(1) {
   top: 13px;
   left: 60px;
   scale: 0.5;
   background: rgb(255, 244, 243);
   animation: star1 2s infinite alternate;
 }
-li:nth-child(2) {
+.stars li:nth-child(2) {
   top: 45px;
   left: 100px;
   scale: 0.5;
   background: rgb(255, 244, 243);
   animation: star1 2.5s infinite alternate;
 }
-li:nth-child(3) {
+.stars li:nth-child(3) {
   top: 35px;
   left: 30px;
   scale: 0.5;
   background: rgb(199, 216, 255);
   animation: star2 3s infinite alternate;
 }
-li:nth-child(4) {
+.stars li:nth-child(4) {
   top: 55px;
   left: 145px;
   scale: 0.5;
   background: rgb(199, 216, 255);
   animation: star2 7s infinite alternate;
 }
-li:nth-child(5) {
+.stars li:nth-child(5) {
   top: 22px;
   left: 90px;
   scale: 0.5;
   background: rgb(199, 216, 255);
   animation: star2 3.8s infinite alternate;
 }
-li:nth-child(6) {
+.stars li:nth-child(6) {
   top: 28px;
   left: 125px;
   scale: 0.5;
   background: rgb(255, 229, 207);
   animation: star3 5s infinite alternate;
 }
-li:nth-child(7) {
+.stars li:nth-child(7) {
   top: 55px;
   left: 45px;
   scale: 0.5;
   background: rgb(255, 229, 207);
   animation: star3 6s infinite alternate;
 }
-li:nth-child(8) {
+.stars li:nth-child(8) {
   top: 80px;
   left: 20px;
   scale: 0.5;
   background: rgb(255, 244, 243);
   animation: star1 2.4s infinite alternate;
 }
-li:nth-child(9) {
+.stars li:nth-child(9) {
   top: 85px;
   left: 140px;
   scale: 0.5;
