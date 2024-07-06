@@ -283,13 +283,13 @@
           <div class="w-full lg:w-1/3 relative">
             <span class="custom-shadow bg-pastel-green-shadow"></span>
             <div
-              class="flex flex-col h-full justify-start gap-16 rounded-large bg-pastel-green p-8 relative z-10 drop-shadow-sm"
+              class="flex flex-col h-full justify-start gap-12 rounded-large bg-pastel-green p-8 relative z-10 drop-shadow-sm"
             >
               <div class="relative mr-2">
                 <img
                   src="./imgs/responsive-web-demo-img.jpg"
                   alt="Image displaying different screen sizes"
-                  class="custom-img object-cover aspect-video w-full lg:h-[200px]"
+                  class="custom-img object-cover w-full h-[300px] lg:h-[225px]"
                 />
                 <span class="custom-shadow bg-pastel-green-shadow"></span>
               </div>
@@ -309,15 +309,41 @@
           <div class="w-full lg:w-1/3 relative">
             <span class="custom-shadow bg-pastel-purple-shadow"></span>
             <div
-              class="flex flex-col h-full justify-start gap-16 rounded-large bg-pastel-purple p-8 relative z-10 drop-shadow-sm"
+              class="flex flex-col h-full justify-start gap-12 rounded-large bg-pastel-purple p-8 relative z-10 drop-shadow-sm"
             >
               <div class="relative mr-2">
-                <img
-                  src="./imgs/css-styling-demo-img.jpg"
-                  alt="Image displaying different screen sizes"
-                  class="custom-img object-cover aspect-video w-full lg:h-[200px]"
-                />
-                <span class="custom-shadow bg-pastel-purple-shadow"></span>
+                <div class="frame h-[300px] lg:h-[225px] rounded-large">
+                  <div class="circle">
+                    <span class="sun"></span>
+                    <span class="moon"
+                      ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"
+                        />
+                      </svg>
+                    </span>
+                    <span class="sky"></span>
+                    <ul class="stars">
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                    </ul>
+                    <span class="pyramid"></span>
+                    <span class="ground"></span>
+                  </div>
+                </div>
+                <span
+                  class="custom-shadow bg-pastel-purple-shadow -z-10"
+                ></span>
               </div>
               <div>
                 <h3 class="text-lg xl:text-xl font-medium">
@@ -335,15 +361,25 @@
           <div class="w-full lg:w-1/3 relative">
             <span class="custom-shadow bg-pastel-orange-shadow"></span>
             <div
-              class="flex flex-col h-full justify-start gap-16 rounded-large bg-pastel-orange p-8 relative z-10 drop-shadow-sm"
+              class="flex flex-col h-full justify-start gap-12 rounded-large bg-pastel-orange p-8 relative z-10 drop-shadow-sm"
             >
               <div class="relative mr-2">
-                <img
-                  src="./imgs/javascript-demo-img.jpg"
-                  alt="Image displaying different screen sizes"
-                  class="custom-img object-cover aspect-video w-full lg:h-[200px]"
-                />
-                <span class="custom-shadow bg-pastel-orange-shadow"></span>
+                <div
+                  class="bg-teal-100 h-[300px] lg:h-[225px] gap-4 flex flex-col items-center justify-center rounded-large"
+                >
+                  <div
+                    class="day text-2xl flex items-center justify-center tracking-widest"
+                  ></div>
+                  <div
+                    class="clock flex items-center justify-center gap-1 mx-2"
+                  ></div>
+                  <div
+                    class="month flex items-center justify-center text-xl"
+                  ></div>
+                </div>
+                <span
+                  class="custom-shadow bg-pastel-orange-shadow -z-10"
+                ></span>
               </div>
               <div>
                 <h3 class="text-lg xl:text-xl font-medium">
@@ -574,5 +610,7 @@
         document.getElementById("form").reset();
       };
     </script>
+    <script src="http://cdn.date-fns.org/v1.9.0/date_fns.min.js"></script>
+    <script src="javascript/sandbox.js"></script>
   </body>
 </html>
