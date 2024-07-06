@@ -1204,6 +1204,11 @@ video {
   text-transform: uppercase;
 }
 
+.ordinal{
+  --tw-ordinal: ordinal;
+  font-variant-numeric: var(--tw-ordinal) var(--tw-slashed-zero) var(--tw-numeric-figure) var(--tw-numeric-spacing) var(--tw-numeric-fraction);
+}
+
 .leading-7{
   line-height: 1.75rem;
 }
