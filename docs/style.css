@@ -906,10 +906,6 @@ video {
   gap: 2rem;
 }
 
-.gap-14{
-  gap: 3.5rem;
-}
-
 .space-y-2 > :not([hidden]) ~ :not([hidden]){
   --tw-space-y-reverse: 0;
   margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
@@ -1271,6 +1267,10 @@ video {
   transition-duration: 700ms;
 }
 
+.duration-500{
+  transition-duration: 500ms;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -1381,6 +1381,11 @@ li::before {
 .after\:duration-300::after{
   content: var(--tw-content);
   transition-duration: 300ms;
+}
+
+.after\:duration-500::after{
+  content: var(--tw-content);
+  transition-duration: 500ms;
 }
 
 .after\:content-\[\'\'\]::after{
