@@ -1,436 +1,326 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Resume - Virgil Jones - Web Development Portfolio</title>
-    <link rel="stylesheet" href="../style.css" />
-    <script src="//unpkg.com/alpinejs" defer></script>
-    <script
-      src="https://kit.fontawesome.com/77835667ac.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
-  <body
-    class="bg-pastel-pink font-custom text-pastel-gray tracking-widest flex flex-col min-h-screen"
-  >
-    <!-- Main navigation -->
-    <header class="sticky top-0 z-50">
-      <nav
-        class="container flex items-center justify-between py-6 bg-pastel-pink"
-        x-data="{ open: false }"
-      >
-        <a
-          href="../index.html"
-          class="-m-1.5 p-1.5 hover:text-pastel-hot-pink transition"
-        >
-          <span class="uppercase text-xl tracking-widest">Virgil Jones</span>
-        </a>
-        <div class="flex lg:hidden">
-          <button
-            @click="open = ! open"
-            type="button"
-            class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5"
-          >
-            <span class="sr-only">Open main menu</span>
-            <svg
-              class="h-6 w-6"
-              :class="open ? 'hidden' : 'block'"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              aria-hidden="true"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-              />
-            </svg>
-          </button>
-        </div>
-        <div class="hidden lg:flex lg:gap-x-10">
-          <a href="#" class="text-md hover:text-pastel-hot-pink transition"
-            >Resume</a
-          >
-          <a
-            href="../index.html#projects"
-            class="text-md hover:text-pastel-hot-pink transition"
-            >Projects</a
-          >
-          <a
-            href="../index.html#skills"
-            class="text-md hover:text-pastel-hot-pink transition"
-            >Skills</a
-          >
-          <a
-            href="../index.html#about"
-            class="text-md hover:text-pastel-hot-pink transition"
-            >About Me</a
-          >
-          <a
-            href="../index.html#contact"
-            class="text-md hover:text-pastel-hot-pink transition"
-            >Contact</a
-          >
-        </div>
-        <!-- Mobile menu, show/hide based on menu open state. -->
-        <div x-show="open" class="lg:hidden">
-          <!-- Background backdrop, show/hide based on slide-over state. -->
-          <div class="fixed inset-0 z-10"></div>
-          <div
-            class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
-          >
-            <div class="flex items-center justify-between">
-              <a
-                href="../index.html"
-                class="-m-1.5 p-1.5"
-                @click="open = ! open"
-              >
-                <span class="uppercase text-xl tracking-widest"
-                  >Virgil Jones</span
-                >
-              </a>
-              <button
-                type="button"
-                @click="open = ! open"
-                class="-m-2.5 rounded-md p-2.5 text-gray-700"
-              >
-                <span class="sr-only">Close menu</span>
-                <svg
-                  class="h-6 w-6"
-                  :class="open ? 'block' : 'hidden'"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                </svg>
-              </button>
-            </div>
-            <div class="mt-6 flow-root">
-              <div class="-my-6">
-                <div class="space-y-2 py-6">
-                  <a
-                    href="#"
-                    @click="open = ! open"
-                    class="-mx-3 block rounded-lg px-3 py-2 font-medium leading-7 hover:bg-gray-50"
-                    >Resume</a
-                  >
-                  <a
-                    href="../index.html#projects"
-                    @click="open = ! open"
-                    class="-mx-3 block rounded-lg px-3 py-2 font-medium leading-7 hover:bg-gray-50"
-                    >Projects</a
-                  >
-                  <a
-                    href="../index.html#skills"
-                    @click="open = ! open"
-                    class="-mx-3 block rounded-lg px-3 py-2 font-medium leading-7 hover:bg-gray-50"
-                    >Skills</a
-                  >
-                  <a
-                    href="../index.html#about"
-                    @click="open = ! open"
-                    class="-mx-3 block rounded-lg px-3 py-2 font-medium leading-7 hover:bg-gray-50"
-                    >About Me</a
-                  >
-                  <a
-                    href="../index.html#contact"
-                    @click="open = ! open"
-                    class="-mx-3 block rounded-lg px-3 py-2 font-medium leading-7 hover:bg-gray-50"
-                    >Contact</a
-                  >
-                </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resume - Virgil Jones - Web Development Portfolio</title>
+  <link rel="stylesheet" href="../style.css" />
+  <script src="//unpkg.com/alpinejs" defer></script>
+  <script src="https://kit.fontawesome.com/77835667ac.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="bg-pastel-pink font-custom text-pastel-gray tracking-widest flex flex-col min-h-screen">
+  <!-- Main navigation -->
+  <header class="sticky top-0 z-50">
+    <nav class="container flex items-center justify-between py-6 bg-pastel-pink" x-data="{ open: false }">
+      <a href="../index.html" class="-m-1.5 p-1.5 hover:text-pastel-hot-pink transition">
+        <span class="uppercase text-xl tracking-widest">Virgil Jones</span>
+      </a>
+      <div class="flex lg:hidden">
+        <button @click="open = ! open" type="button"
+          class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5">
+          <span class="sr-only">Open main menu</span>
+          <svg class="h-6 w-6" :class="open ? 'hidden' : 'block'" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+        </button>
+      </div>
+      <div class="hidden lg:flex lg:gap-x-10">
+        <a href="#" class="text-md hover:text-pastel-hot-pink transition">Resume</a>
+        <a href="../index.html#projects" class="text-md hover:text-pastel-hot-pink transition">Projects</a>
+        <a href="../index.html#skills" class="text-md hover:text-pastel-hot-pink transition">Skills</a>
+        <a href="../index.html#about" class="text-md hover:text-pastel-hot-pink transition">About Me</a>
+        <a href="../index.html#contact" class="text-md hover:text-pastel-hot-pink transition">Contact</a>
+      </div>
+      <!-- Mobile menu, show/hide based on menu open state. -->
+      <div x-show="open" class="lg:hidden">
+        <!-- Background backdrop, show/hide based on slide-over state. -->
+        <div class="fixed inset-0 z-10"></div>
+        <div
+          class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+          <div class="flex items-center justify-between">
+            <a href="../index.html" class="-m-1.5 p-1.5" @click="open = ! open">
+              <span class="uppercase text-xl tracking-widest">Virgil Jones</span>
+            </a>
+            <button type="button" @click="open = ! open" class="-m-2.5 rounded-md p-2.5 text-gray-700">
+              <span class="sr-only">Close menu</span>
+              <svg class="h-6 w-6" :class="open ? 'block' : 'hidden'" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+          <div class="mt-6 flow-root">
+            <div class="-my-6">
+              <div class="space-y-2 py-6">
+                <a href="#" @click="open = ! open"
+                  class="-mx-3 block rounded-lg px-3 py-2 font-medium leading-7 hover:bg-gray-50">Resume</a>
+                <a href="../index.html#projects" @click="open = ! open"
+                  class="-mx-3 block rounded-lg px-3 py-2 font-medium leading-7 hover:bg-gray-50">Projects</a>
+                <a href="../index.html#skills" @click="open = ! open"
+                  class="-mx-3 block rounded-lg px-3 py-2 font-medium leading-7 hover:bg-gray-50">Skills</a>
+                <a href="../index.html#about" @click="open = ! open"
+                  class="-mx-3 block rounded-lg px-3 py-2 font-medium leading-7 hover:bg-gray-50">About Me</a>
+                <a href="../index.html#contact" @click="open = ! open"
+                  class="-mx-3 block rounded-lg px-3 py-2 font-medium leading-7 hover:bg-gray-50">Contact</a>
               </div>
             </div>
           </div>
         </div>
-      </nav>
-    </header>
-    <!-- Main content section -->
-    <main
-      class="container xl:max-w-5xl mt-16 lg:mt-20 flex flex-col flex-grow text-md font-normal gap-16 leading-7"
-    >
-      <section class="flex flex-col gap-2">
-        <h1 class="uppercase tracking-widest text-4xl lg:text-5xl xl:text-6xl">
-          Virgil Jones
-        </h1>
-        <div>
-          <p class="text-lg font-medium">Front-end Developer | Student</p>
-          <p>Tucson, Arizona</p>
+      </div>
+    </nav>
+  </header>
+  <!-- Main content section -->
+  <main class="container xl:max-w-5xl mt-16 lg:mt-20 flex flex-col flex-grow text-md font-normal gap-16 leading-7">
+    <section class="flex flex-col gap-2">
+      <h1 class="uppercase tracking-widest text-4xl lg:text-5xl xl:text-6xl">
+        Virgil Jones
+      </h1>
+      <div>
+        <p class="text-lg font-medium">Front-end Developer | Student</p>
+        <p>Tucson, Arizona</p>
+      </div>
+      <p class="mt-4">
+        As a front-end developer and current computer science student, I am
+        continuously expanding my programming knowledge and skills. I am
+        well-versed in HTML, CSS (including TailwindCSS), and JavaScript
+        (including frameworks like SolidJS and React). I'm committed to
+        staying up-to-date with the latest trends and continuously enhancing
+        my skills to deliver user-friendly applications. As I pursue my
+        degree, I am eager to apply my academic learnings to real-world
+        projects and make meaningful contributions to the field of
+        programming.
+      </p>
+    </section>
+    <!-- Employment history -->
+    <section class="flex flex-col gap-6">
+      <h2 class="uppercase tracking-widest text-2xl md:text-3xl font-normal pb-2 border-b-[1px] border-gray-400">
+        Employment History
+      </h2>
+      <!-- Post.news | employment history -->
+      <section class="flex flex-col">
+        <div class="flex justify-between flex-col md:flex-row">
+          <h3 class="font-medium text-xl">Post.news</h3>
+          <p class="hidden md:block">New York City, NY (Remote)</p>
+        </div>
+        <div class="flex justify-between flex-col md:flex-row">
+          <p>Junior Front-end Developer</p>
+          <p class="md:hidden">New York City, NY (Remote)</p>
+          <p>January 2023 - May 2023</p>
         </div>
         <p class="mt-4">
-          As a front-end developer and current computer science student, I am
-          continuously expanding my programming knowledge and skills. I am
-          well-versed in HTML, CSS (including TailwindCSS), and JavaScript
-          (including frameworks like SolidJS and React). I'm committed to
-          staying up-to-date with the latest trends and continuously enhancing
-          my skills to deliver user-friendly applications. As I pursue my
-          degree, I am eager to apply my academic learnings to real-world
-          projects and make meaningful contributions to the field of
-          programming.
+          As a front-end developer at Post.news, I specialized in UI and UX
+          development using SolidJS, TailwindCSS, and TypeScript. My primary
+          focus was to ensure that the website's visual and functional
+          elements met user needs and enhanced the overall user experience.
+        </p>
+        <ul class="flex flex-col mt-2 gap-2 md:pl-4">
+          <li>
+            Fixed visual problems on the website to improve consistency and
+            user experience.
+          </li>
+          <li>
+            Created universal buttons and elements to ensure a cohesive design
+            across the website.
+          </li>
+          <li>
+            Redesigned the layout of articles to match the design team's
+            specifications, resulting in a more uniform and user-friendly
+            interface.
+          </li>
+          <li>
+            Collaborated closely with designers, project managers, and
+            back-end developers to deliver high-quality projects on time.
+          </li>
+          <li>Optimized website components for SEO and accessibility.</li>
+        </ul>
+      </section>
+      <span class="h-[1px] bg-gray-400 opacity-30"></span>
+      <!-- Amoeba | employment history -->
+      <section class="flex flex-col">
+        <div class="flex justify-between flex-col md:flex-row">
+          <h3 class="font-medium text-xl">Amoeba</h3>
+          <p class="hidden md:block">Los Angeles, CA (Remote)</p>
+        </div>
+        <div class="flex justify-between flex-col md:flex-row">
+          <p>Junior Front-end Developer</p>
+          <p class="md:hidden">Los Angeles, CA (Remote)</p>
+          <p>April 2022 - December 2022</p>
+        </div>
+        <p class="mt-4">
+          During my internship, I gained hands-on experience in developing web
+          applications using TypeScript, React, and TailwindCSS, collaborating
+          with senior developers and participating in code reviews.
+        </p>
+        <ul class="flex flex-col mt-2 gap-2 md:pl-4">
+          <li>
+            Developed web applications using TypeScript, React, and
+            TailwindCSS.
+          </li>
+          <li>
+            Collaborated with senior developers, gaining insights into
+            advanced development techniques.
+          </li>
+          <li>
+            Participated in code reviews, enhancing my knowledge of best
+            practices and coding standards.
+          </li>
+        </ul>
+      </section>
+      <span class="h-[1px] bg-gray-400 opacity-30"></span>
+      <!-- Sonoran glass school | employment history -->
+      <section class="flex flex-col">
+        <div class="flex justify-between flex-col md:flex-row">
+          <h3 class="font-medium text-xl">Sonoran Glass School</h3>
+          <p class="hidden md:block">Tucson, AZ</p>
+        </div>
+        <div class="flex justify-between flex-col md:flex-row">
+          <p>Studio Manager</p>
+          <p class="md:hidden">Tucson, AZ</p>
+          <p>October 2014 - September 2021</p>
+        </div>
+        <p class="mt-4">
+          As the studio manager, I was responsible for the overall operations
+          of the glass fusing studio, including supervising a team of
+          instructors, teaching students of all ages, and managing
+          administrative tasks.
+        </p>
+        <ul class="flex flex-col mt-2 gap-2 md:pl-4">
+          <li>
+            Taught glassblowing to students of all ages, fostering a creative
+            learning environment.
+          </li>
+          <li>
+            Gained experience in budgeting, scheduling, and event planning.
+          </li>
+          <li>
+            Expanded the studio's outreach program within the local community.
+          </li>
+          <li>
+            Managed and maintained the school's WordPress website, ensuring
+            up-to-date content and functionality.
+          </li>
+        </ul>
+      </section>
+    </section>
+    <!-- Education history -->
+    <section class="flex flex-col gap-6">
+      <h2 class="uppercase tracking-widest text-2xl md:text-3xl font-normal pb-2 border-b-[1px] border-gray-400">
+        Education
+      </h2>
+      <!-- Arizona State University -->
+      <section class="flex flex-col">
+        <h3 class="font-medium text-xl">
+          Bachelor of Science in Graphic Information Technology - Full-Stack Web Development
+        </h3>
+        <div class="flex justify-between flex-col md:flex-row">
+          <p>Arizona State University</p>
+          <p>Current - 2027</p>
+        </div>
+        <p class="mt-3">
+          Currently pursuing a Bachelor of Science in Graphic Information Technology with a specialization in Full-Stack
+          Web
+          Development. The program emphasizes front-end and back-end development, database management, user experience
+          design, and
+          responsive web technologies.
         </p>
       </section>
-      <!-- Employment history -->
-      <section class="flex flex-col gap-6">
-        <h2
-          class="uppercase tracking-widest text-2xl md:text-3xl font-normal pb-2 border-b-[1px] border-gray-400"
-        >
-          Employment History
-        </h2>
-        <!-- Post.news | employment history -->
+      <span class="h-[1px] bg-gray-400 opacity-30"></span>
+      <!-- Amoeba Front-end Bootcamp -->
+      <section class="flex flex-col">
+        <h3 class="font-medium text-xl">Front-end Bootcamp</h3>
+        <div class="flex justify-between flex-col md:flex-row">
+          <p>Amoeba</p>
+          <p>January - April 2022</p>
+        </div>
+        <p class="mt-3">
+          One-on-one courses with senior developers focusing on frontend
+          development fundamentals and emerging technologies.
+        </p>
+      </section>
+    </section>
+    <!-- Skills -->
+    <section class="flex flex-col gap-8">
+      <h2 class="uppercase tracking-widest text-2xl md:text-3xl font-normal pb-2 border-b-[1px] border-gray-400">
+        Skills
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Programming languages -->
         <section class="flex flex-col">
-          <div class="flex justify-between flex-col md:flex-row">
-            <h3 class="font-medium text-xl">Post.news</h3>
-            <p class="hidden md:block">New York City, NY (Remote)</p>
-          </div>
-          <div class="flex justify-between flex-col md:flex-row">
-            <p>Junior Front-end Developer</p>
-            <p class="md:hidden">New York City, NY (Remote)</p>
-            <p>January 2023 - May 2023</p>
-          </div>
-          <p class="mt-4">
-            As a front-end developer at Post.news, I specialized in UI and UX
-            development using SolidJS, TailwindCSS, and TypeScript. My primary
-            focus was to ensure that the website's visual and functional
-            elements met user needs and enhanced the overall user experience.
-          </p>
+          <h3 class="font-medium text-xl">Programming Languages</h3>
           <ul class="flex flex-col mt-2 gap-2 md:pl-4">
-            <li>
-              Fixed visual problems on the website to improve consistency and
-              user experience.
-            </li>
-            <li>
-              Created universal buttons and elements to ensure a cohesive design
-              across the website.
-            </li>
-            <li>
-              Redesigned the layout of articles to match the design team's
-              specifications, resulting in a more uniform and user-friendly
-              interface.
-            </li>
-            <li>
-              Collaborated closely with designers, project managers, and
-              back-end developers to deliver high-quality projects on time.
-            </li>
-            <li>Optimized website components for SEO and accessibility.</li>
+            <li>TypeScript</li>
+            <li>Javascript</li>
           </ul>
         </section>
-        <span class="h-[1px] bg-gray-400 opacity-30"></span>
-        <!-- Amoeba | employment history -->
-        <section class="flex flex-col">
-          <div class="flex justify-between flex-col md:flex-row">
-            <h3 class="font-medium text-xl">Amoeba</h3>
-            <p class="hidden md:block">Los Angeles, CA (Remote)</p>
-          </div>
-          <div class="flex justify-between flex-col md:flex-row">
-            <p>Junior Front-end Developer</p>
-            <p class="md:hidden">Los Angeles, CA (Remote)</p>
-            <p>April 2022 - December 2022</p>
-          </div>
-          <p class="mt-4">
-            During my internship, I gained hands-on experience in developing web
-            applications using TypeScript, React, and TailwindCSS, collaborating
-            with senior developers and participating in code reviews.
-          </p>
+        <!-- Front-End Frameworks/Libraries -->
+        <section
+          class="flex flex-col border-t-[1px] border-solid border-gray-400 border-opacity-30 pt-8 md:border-hidden md:pt-0">
+          <h3 class="font-medium text-xl">Front-End Frameworks/Libraries</h3>
           <ul class="flex flex-col mt-2 gap-2 md:pl-4">
-            <li>
-              Developed web applications using TypeScript, React, and
-              TailwindCSS.
-            </li>
-            <li>
-              Collaborated with senior developers, gaining insights into
-              advanced development techniques.
-            </li>
-            <li>
-              Participated in code reviews, enhancing my knowledge of best
-              practices and coding standards.
-            </li>
+            <li>SolidJS</li>
+            <li>React.js</li>
           </ul>
         </section>
-        <span class="h-[1px] bg-gray-400 opacity-30"></span>
-        <!-- Sonoran glass school | employment history -->
-        <section class="flex flex-col">
-          <div class="flex justify-between flex-col md:flex-row">
-            <h3 class="font-medium text-xl">Sonoran Glass School</h3>
-            <p class="hidden md:block">Tucson, AZ</p>
-          </div>
-          <div class="flex justify-between flex-col md:flex-row">
-            <p>Studio Manager</p>
-            <p class="md:hidden">Tucson, AZ</p>
-            <p>October 2014 - September 2021</p>
-          </div>
-          <p class="mt-4">
-            As the studio manager, I was responsible for the overall operations
-            of the glass fusing studio, including supervising a team of
-            instructors, teaching students of all ages, and managing
-            administrative tasks.
-          </p>
+        <!-- Web Technologies -->
+        <section class="flex flex-col border-t-[1px] border-solid border-gray-400 border-opacity-30 pt-6 md:pt-8">
+          <h3 class="font-medium text-xl">Web Technologies</h3>
           <ul class="flex flex-col mt-2 gap-2 md:pl-4">
-            <li>
-              Taught glassblowing to students of all ages, fostering a creative
-              learning environment.
-            </li>
-            <li>
-              Gained experience in budgeting, scheduling, and event planning.
-            </li>
-            <li>
-              Expanded the studio's outreach program within the local community.
-            </li>
-            <li>
-              Managed and maintained the school's WordPress website, ensuring
-              up-to-date content and functionality.
-            </li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>SASS/SCSS</li>
+            <li>Tailwind CSS</li>
           </ul>
         </section>
-      </section>
-      <!-- Education history -->
-      <section class="flex flex-col gap-6">
-        <h2
-          class="uppercase tracking-widest text-2xl md:text-3xl font-normal pb-2 border-b-[1px] border-gray-400"
-        >
-          Education
-        </h2>
-        <!-- Arizona State University -->
-        <section class="flex flex-col">
-          <h3 class="font-medium text-xl">
-            Bachelor of Science in Computer Science
-          </h3>
-          <div class="flex justify-between flex-col md:flex-row">
-            <p>Arizona State University</p>
-            <p>Current - 2027</p>
-          </div>
-          <p class="mt-3">
-            Currently enrolled in a comprehensive computer science program
-            focused on web development, data structures, algorithms, and
-            software engineering.
-          </p>
+        <!-- Design Tools -->
+        <section class="flex flex-col border-t-[1px] border-solid border-gray-400 border-opacity-30 pt-6 md:pt-8">
+          <h3 class="font-medium text-xl">Design Tools</h3>
+          <ul class="flex flex-col mt-2 gap-2 md:pl-4">
+            <li>Figma</li>
+            <li>Canva</li>
+            <li>Photoshop</li>
+          </ul>
         </section>
-        <span class="h-[1px] bg-gray-400 opacity-30"></span>
-        <!-- Amoeba Front-end Bootcamp -->
-        <section class="flex flex-col">
-          <h3 class="font-medium text-xl">Front-end Bootcamp</h3>
-          <div class="flex justify-between flex-col md:flex-row">
-            <p>Amoeba</p>
-            <p>January - April 2022</p>
-          </div>
-          <p class="mt-3">
-            One-on-one courses with senior developers focusing on frontend
-            development fundamentals and emerging technologies.
-          </p>
-        </section>
-      </section>
-      <!-- Skills -->
-      <section class="flex flex-col gap-8">
-        <h2
-          class="uppercase tracking-widest text-2xl md:text-3xl font-normal pb-2 border-b-[1px] border-gray-400"
-        >
-          Skills
-        </h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <!-- Programming languages -->
-          <section class="flex flex-col">
-            <h3 class="font-medium text-xl">Programming Languages</h3>
-            <ul class="flex flex-col mt-2 gap-2 md:pl-4">
-              <li>TypeScript</li>
-              <li>Javascript</li>
-            </ul>
-          </section>
-          <!-- Front-End Frameworks/Libraries -->
-          <section
-            class="flex flex-col border-t-[1px] border-solid border-gray-400 border-opacity-30 pt-8 md:border-hidden md:pt-0"
-          >
-            <h3 class="font-medium text-xl">Front-End Frameworks/Libraries</h3>
-            <ul class="flex flex-col mt-2 gap-2 md:pl-4">
-              <li>SolidJS</li>
-              <li>React.js</li>
-            </ul>
-          </section>
-          <!-- Web Technologies -->
-          <section
-            class="flex flex-col border-t-[1px] border-solid border-gray-400 border-opacity-30 pt-6 md:pt-8"
-          >
-            <h3 class="font-medium text-xl">Web Technologies</h3>
-            <ul class="flex flex-col mt-2 gap-2 md:pl-4">
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>SASS/SCSS</li>
-              <li>Tailwind CSS</li>
-            </ul>
-          </section>
-          <!-- Design Tools -->
-          <section
-            class="flex flex-col border-t-[1px] border-solid border-gray-400 border-opacity-30 pt-6 md:pt-8"
-          >
-            <h3 class="font-medium text-xl">Design Tools</h3>
-            <ul class="flex flex-col mt-2 gap-2 md:pl-4">
-              <li>Figma</li>
-              <li>Canva</li>
-              <li>Photoshop</li>
-            </ul>
-          </section>
-        </div>
-      </section>
-    </main>
-    <!-- Footer -->
-    <footer
-      class="mt-32 mb-52 container"
-      x-data="{ year: new Date().getFullYear() }"
-    >
-      <span class="w-full block h-[1px] bg-gray-400"></span>
-      <div
-        class="flex flex-col lg:flex-row justify-between items-center gap-8 mt-8 lg:mt-4"
-      >
-        <div>
-          <p class="text-lg font-light">
-            &copy; <span x-text="year"></span> Virgil Jones
-          </p>
-          <p class="text-lg font-light">All rights reserved</p>
-        </div>
-        <div class="flex gap-3">
-          <a href="https://github.com/vejtheguy" target="_blank">
-            <i
-              class="fa-brands fa-github fa-2xl text-gray-500 hover:text-pastel-hot-pink transition cursor-pointer"
-            ></i>
-          </a>
-          <a href="https://codepen.io/vejtheguy" target="_blank"
-            ><i
-              class="fa-brands fa-codepen fa-2xl text-gray-500 hover:text-pastel-hot-pink transition cursor-pointer"
-            ></i
-          ></a>
-          <a
-            href="https://www.linkedin.com/in/virgil-elliot-jones/"
-            target="_blank"
-          >
-            <i
-              class="fa-brands fa-linkedin-in fa-2xl text-gray-500 hover:text-pastel-hot-pink transition cursor-pointer"
-            ></i>
-          </a>
-          <a href="mailto:vejtheguy48@gmail.com" target="_blank">
-            <i
-              class="fa-regular fa-envelope fa-2xl text-gray-500 hover:text-pastel-hot-pink transition cursor-pointer"
-            ></i>
-          </a>
-          <a href="https://twitter.com/aworthlessgamer" target="_blank">
-            <i
-              class="fa-brands fa-x-twitter fa-2xl text-gray-500 hover:text-pastel-hot-pink transition cursor-pointer"
-            ></i>
-          </a>
-          <a href="https://instagram.com/vejtheguy" target="_blank">
-            <i
-              class="fa-brands fa-instagram fa-2xl text-gray-500 hover:text-pastel-hot-pink transition cursor-pointer"
-            ></i>
-          </a>
-        </div>
       </div>
-    </footer>
-  </body>
+    </section>
+  </main>
+  <!-- Footer -->
+  <footer class="mt-32 mb-52 container" x-data="{ year: new Date().getFullYear() }">
+    <span class="w-full block h-[1px] bg-gray-400"></span>
+    <div class="flex flex-col lg:flex-row justify-between items-center gap-8 mt-8 lg:mt-4">
+      <div>
+        <p class="text-lg font-light">
+          &copy; <span x-text="year"></span> Virgil Jones
+        </p>
+        <p class="text-lg font-light">All rights reserved</p>
+      </div>
+      <div class="flex gap-3">
+        <a href="https://github.com/vejtheguy" target="_blank">
+          <i class="fa-brands fa-github fa-2xl text-gray-500 hover:text-pastel-hot-pink transition cursor-pointer"></i>
+        </a>
+        <a href="https://codepen.io/vejtheguy" target="_blank"><i
+            class="fa-brands fa-codepen fa-2xl text-gray-500 hover:text-pastel-hot-pink transition cursor-pointer"></i></a>
+        <a href="https://www.linkedin.com/in/virgil-elliot-jones/" target="_blank">
+          <i
+            class="fa-brands fa-linkedin-in fa-2xl text-gray-500 hover:text-pastel-hot-pink transition cursor-pointer"></i>
+        </a>
+        <a href="mailto:vejtheguy48@gmail.com" target="_blank">
+          <i
+            class="fa-regular fa-envelope fa-2xl text-gray-500 hover:text-pastel-hot-pink transition cursor-pointer"></i>
+        </a>
+        <a href="https://twitter.com/aworthlessgamer" target="_blank">
+          <i
+            class="fa-brands fa-x-twitter fa-2xl text-gray-500 hover:text-pastel-hot-pink transition cursor-pointer"></i>
+        </a>
+        <a href="https://instagram.com/vejtheguy" target="_blank">
+          <i
+            class="fa-brands fa-instagram fa-2xl text-gray-500 hover:text-pastel-hot-pink transition cursor-pointer"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+</body>
+
 </html>
