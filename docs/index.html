@@ -1,616 +1,389 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Virgil Jones - Web Development Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="//unpkg.com/alpinejs" defer></script>
-    <script
-      src="https://kit.fontawesome.com/77835667ac.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
-  <body class="bg-pastel-pink font-custom text-pastel-gray tracking-widest">
-    <!-- Main navigation -->
-    <header class="sticky top-0 z-50">
-      <nav
-        class="container flex items-center justify-between py-6 bg-pastel-pink"
-        x-data="{ open: false }"
-      >
-        <a href="#" class="-m-1.5 p-1.5 hover:text-pastel-hot-pink transition">
-          <span class="uppercase text-xl tracking-widest">Virgil Jones</span>
-        </a>
-        <div class="flex lg:hidden">
-          <button
-            @click="open = ! open"
-            type="button"
-            class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5"
-          >
-            <span class="sr-only">Open main menu</span>
-            <svg
-              class="h-6 w-6"
-              :class="open ? 'hidden' : 'block'"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              aria-hidden="true"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-              />
-            </svg>
-          </button>
-        </div>
-        <div class="hidden lg:flex lg:gap-x-10">
-          <a
-            href="./pages/resume.html"
-            class="text-md hover:text-pastel-hot-pink transition"
-            >Resume</a
-          >
-          <a
-            href="#projects"
-            class="text-md hover:text-pastel-hot-pink transition"
-            >Projects</a
-          >
-          <a
-            href="#skills"
-            class="text-md hover:text-pastel-hot-pink transition"
-            >Skills</a
-          >
-          <a href="#about" class="text-md hover:text-pastel-hot-pink transition"
-            >About Me</a
-          >
-          <a
-            href="#contact"
-            class="text-md hover:text-pastel-hot-pink transition"
-            >Contact</a
-          >
-        </div>
-        <!-- Mobile menu, show/hide based on menu open state. -->
-        <div x-show="open" class="lg:hidden">
-          <!-- Background backdrop, show/hide based on slide-over state. -->
-          <div class="fixed inset-0 z-10"></div>
-          <div
-            class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
-          >
-            <div class="flex items-center justify-between">
-              <a href="#" class="-m-1.5 p-1.5" @click="open = ! open">
-                <span class="uppercase text-xl tracking-widest"
-                  >Virgil Jones</span
-                >
-              </a>
-              <button
-                type="button"
-                @click="open = ! open"
-                class="-m-2.5 rounded-md p-2.5 text-gray-700"
-              >
-                <span class="sr-only">Close menu</span>
-                <svg
-                  class="h-6 w-6"
-                  :class="open ? 'block' : 'hidden'"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                </svg>
-              </button>
-            </div>
-            <div class="mt-6 flow-root">
-              <div class="-my-6">
-                <div class="space-y-2 py-6">
-                  <a
-                    href="./pages/resume.html"
-                    @click="open = ! open"
-                    class="-mx-3 block rounded-lg px-3 py-2 font-medium leading-7 hover:bg-gray-50"
-                    >Resume</a
-                  >
-                  <a
-                    href="#projects"
-                    @click="open = ! open"
-                    class="-mx-3 block rounded-lg px-3 py-2 font-medium leading-7 hover:bg-gray-50"
-                    >Projects</a
-                  >
-                  <a
-                    href="#skills"
-                    @click="open = ! open"
-                    class="-mx-3 block rounded-lg px-3 py-2 font-medium leading-7 hover:bg-gray-50"
-                    >Skills</a
-                  >
-                  <a
-                    href="#about"
-                    @click="open = ! open"
-                    class="-mx-3 block rounded-lg px-3 py-2 font-medium leading-7 hover:bg-gray-50"
-                    >About Me</a
-                  >
-                  <a
-                    href="#contact"
-                    @click="open = ! open"
-                    class="-mx-3 block rounded-lg px-3 py-2 font-medium leading-7 hover:bg-gray-50"
-                    >Contact</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </nav>
-    </header>
-    <!-- Main content section -->
-    <main class="container mt-16">
-      <!-- Hero section -->
-      <div class="relative mr-2">
-        <span class="custom-shadow bg-pastel-purple-shadow"></span>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Virgil Jones - Web Development Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="//unpkg.com/alpinejs" defer></script>
+  <script src="https://kit.fontawesome.com/77835667ac.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="bg-pastel-pink font-custom text-pastel-gray tracking-widest">
+  <!-- Main navigation -->
+  <header class="sticky top-0 z-50">
+    <nav class="container flex items-center justify-between py-6 bg-pastel-pink" x-data="{ open: false }">
+      <a href="#" class="-m-1.5 p-1.5 hover:text-pastel-hot-pink transition">
+        <span class="uppercase text-xl tracking-widest">Virgil Jones</span>
+      </a>
+      <div class="flex lg:hidden">
+        <button @click="open = ! open" type="button"
+          class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5">
+          <span class="sr-only">Open main menu</span>
+          <svg class="h-6 w-6" :class="open ? 'hidden' : 'block'" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+        </button>
+      </div>
+      <div class="hidden lg:flex lg:gap-x-10">
+        <a href="./pages/resume.html" class="text-md hover:text-pastel-hot-pink transition">Resume</a>
+        <a href="#projects" class="text-md hover:text-pastel-hot-pink transition">Projects</a>
+        <a href="#skills" class="text-md hover:text-pastel-hot-pink transition">Skills</a>
+        <a href="#about" class="text-md hover:text-pastel-hot-pink transition">About Me</a>
+        <a href="#contact" class="text-md hover:text-pastel-hot-pink transition">Contact</a>
+      </div>
+      <!-- Mobile menu, show/hide based on menu open state. -->
+      <div x-show="open" class="lg:hidden">
+        <!-- Background backdrop, show/hide based on slide-over state. -->
+        <div class="fixed inset-0 z-10"></div>
         <div
-          class="flex flex-col lg:flex-row justify-center items-center gap-8 lg:gap-14 rounded-large bg-pastel-purple px-8 pt-8 pb-12 lg:px-16 lg:pt-16 lg:pb-20 relative z-10 drop-shadow-sm"
-        >
-          <div class="lg:w-1/2 w-full">
-            <p
-              class="text-left lg:text-right text-xl xl:text-2xl font-extralight mr-3"
-            >
-              hi my name is
-            </p>
-            <h1
-              class="uppercase text-left lg:text-right my-4 tracking-widest text-3xl lg:text-5xl xl:text-7xl"
-            >
-              Virgil Jones
-            </h1>
-            <p
-              class="text-left lg:text-right text-xl xl:text-2xl font-extralight mr-3"
-            >
-              aspiring full stack developer
-            </p>
-          </div>
-          <div class="lg:w-1/2 w-full relative">
-            <span class="custom-shadow bg-pastel-purple-shadow"></span>
-            <img
-              src="./imgs/virgil-jones-portfolio-img-1.jpg"
-              alt="Photo of Virgil holding his dog Payton"
-              class="custom-img"
-            />
-          </div>
-        </div>
-      </div>
-      <!-- Project section -->
-      <div id="projects" class="mt-40 mr-2 anchor-offset">
-        <h2 class="uppercase text-5xl mb-28">Projects</h2>
-        <div class="flex justify-between gap-28 flex-col lg:flex-row">
-          <!-- Project wrapper | Hotel Serenity -->
-          <section class="w-full lg:w-1/3 flex flex-col">
-            <a
-              href="https://hotelserenityblueprint.my.canva.site/"
-              target="_blank"
-              class="relative mb-12 group hover:scale-105 duration-300 after:content-[''] after:rounded-large after:w-full after:h-full after:-z-10 after:absolute after:-right-3 after:-bottom-3 after:bg-pastel-orange-shadow"
-            >
-              <span
-                class="opacity-0 group-hover:opacity-100 w-full h-full absolute rounded-large bg-white bg-opacity-40 font-bold text-2xl z-20 top-0 flex flex-col justify-center items-center gap-4 duration-700 delay-100"
-                >Hotel Serenity
-                <span class="text-sm">try the demo site</span></span
-              >
-              <img
-                src="./imgs/hotel-serenity-demo-site.jpg"
-                alt="Screenshot of demo website called Hotel Serenity"
-                class="custom-img object-cover"
-              />
+          class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+          <div class="flex items-center justify-between">
+            <a href="#" class="-m-1.5 p-1.5" @click="open = ! open">
+              <span class="uppercase text-xl tracking-widest">Virgil Jones</span>
             </a>
-            <h3 class="text-xl font-medium">Hotel Serenity - Canva</h3>
-            <p class="text-lg font-light my-4">
-              A sample layout for a luxurious hotel website, designed in Canva.
-            </p>
-            <a
-              href="https://hotelserenityblueprint.my.canva.site/"
-              target="_blank"
-              class="text-sm font-medium mt-auto w-fit hover:text-pastel-hot-pink duration-300"
-              >view demo site</a
-            >
-          </section>
-          <!-- Project wrapper | Pawsome Adoptions -->
-          <section class="w-full lg:w-1/3 flex flex-col">
-            <a
-              href="https://vejtheguy.github.io/pawsome-adoptions/"
-              target="_blank"
-              class="relative mb-12 group hover:scale-105 duration-300 after:content-[''] after:rounded-large after:w-full after:h-full after:-z-10 after:absolute after:-right-3 after:-bottom-3 after:bg-pastel-blue-shadow"
-            >
-              <span
-                class="opacity-0 group-hover:opacity-100 w-full h-full absolute rounded-large bg-white bg-opacity-40 font-bold text-2xl z-20 top-0 flex flex-col justify-center items-center gap-4 duration-700 delay-100"
-                >Pawsome Adoptions
-                <span class="text-sm">try the demo site</span></span
-              >
-              <img
-                src="./imgs/pawsome-adoption-demo-site.jpg"
-                alt="Screenshot of demo website called Pawsome Adoptions"
-                class="custom-img object-cover"
-              />
-            </a>
-            <h3 class="text-xl font-medium">Pawsome Adoptions - ReactJS</h3>
-            <p class="text-lg font-light my-4">
-              A sample dog adoption website built with ReactJS and API
-              integration.
-            </p>
-            <a
-              href="https://vejtheguy.github.io/pawsome-adoptions/"
-              target="_blank"
-              class="text-sm font-medium mt-auto w-fit hover:text-pastel-hot-pink duration-300"
-              >view demo site</a
-            >
-          </section>
-          <!-- Project wrapper | Odin's Recipe Realm -->
-          <section class="w-full lg:w-1/3 flex flex-col">
-            <a
-              href="https://vejtheguy.github.io/odin-recipes/"
-              target="_blank"
-              class="relative mb-12 group hover:scale-105 duration-300 after:content-[''] after:rounded-large after:w-full after:h-full after:-z-10 after:absolute after:-right-3 after:-bottom-3 after:bg-pastel-green-shadow"
-            >
-              <span
-                class="opacity-0 group-hover:opacity-100 w-full h-full absolute rounded-large bg-white bg-opacity-40 font-bold text-2xl z-20 top-0 flex flex-col justify-center items-center gap-4 duration-700 delay-100"
-                >Odin's Recipe Realm
-                <span class="text-sm">try the demo site</span></span
-              >
-              <img
-                src="./imgs/recipe-realm-demo-site.jpg"
-                alt="Screenshot of demo website called Odin's Recipe Realm"
-                class="custom-img object-cover"
-              />
-            </a>
-            <h3 class="text-xl font-medium">Recipe Realm - HTML/CSS</h3>
-            <p class="text-lg font-light my-4">
-              A sample recipe website designed using HTML and CSS.
-            </p>
-            <a
-              href="https://vejtheguy.github.io/odin-recipes/"
-              target="_blank"
-              class="text-sm font-medium mt-auto w-fit hover:text-pastel-hot-pink duration-300"
-              >view demo site</a
-            >
-          </section>
-        </div>
-      </div>
-      <!-- Skills section -->
-      <div id="skills" class="mt-16 mr-2 anchor-offset">
-        <h2 class="uppercase text-5xl mb-28">Skills</h2>
-        <div class="flex justify-between gap-20 flex-col lg:flex-row">
-          <!-- Skill wrapper | Responsive web design -->
-          <div class="w-full lg:w-1/3 relative">
-            <span class="custom-shadow bg-pastel-green-shadow"></span>
-            <div
-              class="flex flex-col h-full justify-start gap-12 rounded-large bg-pastel-green p-8 relative z-10 drop-shadow-sm"
-            >
-              <div class="relative mr-2">
-                <img
-                  src="./imgs/responsive-web-demo-img.jpg"
-                  alt="Image displaying different screen sizes"
-                  class="custom-img object-cover w-full h-[300px] lg:h-[225px]"
-                />
-                <span class="custom-shadow bg-pastel-green-shadow"></span>
-              </div>
-              <div>
-                <h3 class="text-lg xl:text-xl font-medium">
-                  Responsive Web Design
-                </h3>
-                <p class="text-md xl:text-lg font-light mt-6">
-                  Creating responsive websites that prioritize a seamless user
-                  experience across all devices, ensuring accessibility, ease of
-                  use, and optimal performance.
-                </p>
-              </div>
-            </div>
-          </div>
-          <!-- Skill wrapper | CSS styling and frameworks -->
-          <div class="w-full lg:w-1/3 relative">
-            <span class="custom-shadow bg-pastel-purple-shadow"></span>
-            <div
-              class="flex flex-col h-full justify-start gap-12 rounded-large bg-pastel-purple p-8 relative z-10 drop-shadow-sm"
-            >
-              <div class="relative mr-2">
-                <div class="frame h-[300px] lg:h-[225px] rounded-large">
-                  <div class="circle">
-                    <span class="sun"></span>
-                    <span class="moon"
-                      ><svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 16 16"
-                      >
-                        <path
-                          d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"
-                        />
-                      </svg>
-                    </span>
-                    <span class="sky"></span>
-                    <ul class="stars">
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                    </ul>
-                    <span class="pyramid"></span>
-                    <span class="ground"></span>
-                  </div>
-                </div>
-                <span
-                  class="custom-shadow bg-pastel-purple-shadow -z-10"
-                ></span>
-              </div>
-              <div>
-                <h3 class="text-lg xl:text-xl font-medium">
-                  CSS Styling and Frameworks
-                </h3>
-                <p class="text-md xl:text-lg font-light mt-6">
-                  Styling webpages with CSS, Tailwind CSS, and Bootstrap,
-                  incorporating artistic elements to enhance visual appeal and
-                  functionality.
-                </p>
-              </div>
-            </div>
-          </div>
-          <!-- Skill wrapper | Javascript frameworks -->
-          <div class="w-full lg:w-1/3 relative">
-            <span class="custom-shadow bg-pastel-orange-shadow"></span>
-            <div
-              class="flex flex-col h-full justify-start gap-12 rounded-large bg-pastel-orange p-8 relative z-10 drop-shadow-sm"
-            >
-              <div class="relative mr-2">
-                <div
-                  class="bg-teal-100 h-[300px] lg:h-[225px] gap-4 flex flex-col items-center justify-center rounded-large"
-                >
-                  <div
-                    class="day text-2xl flex items-center justify-center tracking-widest"
-                  ></div>
-                  <div
-                    class="clock flex items-center justify-center gap-1 mx-2"
-                  ></div>
-                  <div
-                    class="month flex items-center justify-center text-xl"
-                  ></div>
-                </div>
-                <span
-                  class="custom-shadow bg-pastel-orange-shadow -z-10"
-                ></span>
-              </div>
-              <div>
-                <h3 class="text-lg xl:text-xl font-medium">
-                  JavaScript Frameworks
-                </h3>
-                <p class="text-md xl:text-lg font-light mt-6">
-                  Continuously expanding my JavaScript and framework knowledge
-                  to enhance web functionality and user interaction.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- About me section -->
-      <div id="about" class="mt-16 mr-2 anchor-offset">
-        <h2 class="uppercase text-5xl mb-28">About Me</h2>
-        <div class="relative mr-2">
-          <span class="custom-shadow bg-pastel-yellow-shadow"></span>
-          <div
-            class="flex flex-col lg:flex-row justify-center items-center gap-12 lg:gap-20 rounded-large bg-pastel-yellow px-8 pt-8 pb-12 lg:px-16 lg:pt-16 lg:pb-20 relative z-10 drop-shadow-sm"
-          >
-            <div class="lg:w-1/2 w-full relative">
-              <span class="custom-shadow bg-pastel-yellow-shadow"></span>
-              <img
-                src="./imgs/virgil-jones-glassblowing.jpg"
-                alt="Photo of Virgil glassblowing making a glass goblet"
-                class="custom-img object-cover lg:h-[400px]"
-              />
-            </div>
-            <div class="lg:w-1/2 w-full flex flex-col gap-6 lg:gap-10">
-              <p
-                class="leading-8 xl:leading-9 text-left text-xl xl:text-2xl font-extralight"
-              >
-                I'm a <span class="font-normal">former glassblower</span> turned
-                <span class="font-normal">computer science student</span>. My
-                passion is to
-                <span class="font-normal">create web applications</span> that
-                provide easy <span class="font-normal">user experiences</span>.
-              </p>
-              <p
-                class="leading-8 xl:leading-9 text-left text-xl xl:text-2xl font-extralight"
-              >
-                When I'm not coding, you'll find me
-                <span class="font-normal">gaming</span> or watching
-                <span class="font-normal">horror films</span> with my friends. I
-                also enjoy
-                <span class="font-normal">fire-related hobbies</span> and
-                crafting with my hands, including
-                <span class="font-normal">woodworking</span>,
-                <span class="font-normal">knife making</span>,
-                <span class="font-normal">silversmithing</span>, and
-                <span class="font-normal">glassblowing</span>.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Get in contact section -->
-      <div id="contact" class="mt-16 mr-2 anchor-offset">
-        <h2 class="uppercase text-5xl mb-28">Get in Contact</h2>
-        <div class="flex flex-col lg:flex-row gap-20">
-          <div class="lg:w-1/2 w-full flex flex-col gap-6 lg:gap-10">
-            <p
-              class="leading-8 xl:leading-9 text-left lg:text-right text-xl xl:text-2xl font-extralight"
-            >
-              <span class="font-normal">Feel free to connect!</span> Find more
-              of me on <span class="font-normal">social media</span> or
-              <span class="font-normal">contact me directly</span>. I'm always
-              excited for <span class="font-normal">new opportunities</span>,
-              <span class="font-normal">projects</span>, and
-              <span class="font-normal">collaborations</span>.
-            </p>
-          </div>
-          <form
-            class="lg:w-1/2 w-full flex flex-col"
-            action="https://api.web3forms.com/submit"
-            method="post"
-          >
-            <input
-              type="hidden"
-              name="access_key"
-              value="cce666be-fc14-4151-a24b-678d5f16b4b6"
-            />
-            <input
-              type="hidden"
-              name="subject"
-              value="Portfolio Website Contact Submission"
-            />
-            <input type="hidden" name="from_name" value="Contact.Portfolio" />
-            <label
-              for="name"
-              class="mb-2 text-lg flex justify-between items-end cursor-pointer"
-              >Name:<span class="text-pastel-hot-pink font-medium text-xs mr-2"
-                >required*</span
-              >
-            </label>
-            <div class="relative h-12 mb-8 mr-2">
-              <span
-                class="w-full h-full absolute -right-3 -bottom-3 drop-shadow bg-pastel-blue-shadow"
-              ></span>
-              <input
-                type="text"
-                name="name"
-                id="name"
-                required
-                placeholder="Jane Smith"
-                class="relative w-full h-12 px-4 bg-pastel-blue text-lg outline-pastel-hot-pink"
-              />
-            </div>
-            <label
-              for="email"
-              class="mb-2 text-lg flex justify-between items-end cursor-pointer"
-              >Email:<span class="text-pastel-hot-pink font-medium text-xs mr-2"
-                >required*</span
-              ></label
-            >
-            <div class="relative h-12 mb-8 mr-2">
-              <span
-                class="w-full h-full absolute -right-3 -bottom-3 drop-shadow bg-pastel-blue-shadow"
-              ></span>
-              <input
-                type="email"
-                name="email"
-                id="email"
-                required
-                placeholder="jane.smith@example.com"
-                class="relative w-full h-12 px-4 bg-pastel-blue text-lg outline-pastel-hot-pink"
-              />
-            </div>
-            <label
-              for="message"
-              class="mb-2 text-lg flex justify-between items-end cursor-pointer"
-              >Message:<span
-                class="text-pastel-hot-pink font-medium text-xs mr-2"
-                >required*</span
-              ></label
-            >
-            <div class="relative h-36 mb-8 mr-2">
-              <span
-                class="w-full h-full absolute -right-3 -bottom-3 drop-shadow bg-pastel-blue-shadow"
-              ></span>
-              <textarea
-                id="message"
-                name="message"
-                placeholder="Type your message here..."
-                required
-                class="relative w-full max-h-36 min-h-36 p-4 bg-pastel-blue text-lg outline-pastel-hot-pink"
-              ></textarea>
-            </div>
-            <input
-              type="hidden"
-              name="redirect"
-              value="https://vejtheguy.github.io/portfolio/pages/thank-you.html"
-            />
-            <input
-              type="checkbox"
-              name="botcheck"
-              id="botcheck"
-              class="hidden"
-            />
-            <button
-              type="submit"
-              data-callback="onSubmit"
-              class="rounded-full relative w-1/4 mr-2 self-end bg-pastel-green p-4 text-xl font-light shadow-sm hover:bg-pastel-purple transition duration-300 after:transition after:duration-300 after:content-[''] after:rounded-full after:w-full after:h-full after:-z-10 after:absolute after:-right-3 after:-bottom-3 after:bg-pastel-green-shadow after:hover:bg-pastel-purple-shadow"
-            >
-              send
+            <button type="button" @click="open = ! open" class="-m-2.5 rounded-md p-2.5 text-gray-700">
+              <span class="sr-only">Close menu</span>
+              <svg class="h-6 w-6" :class="open ? 'block' : 'hidden'" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
             </button>
-          </form>
+          </div>
+          <div class="mt-6 flow-root">
+            <div class="-my-6">
+              <div class="space-y-2 py-6">
+                <a href="./pages/resume.html" @click="open = ! open"
+                  class="-mx-3 block rounded-lg px-3 py-2 font-medium leading-7 hover:bg-gray-50">Resume</a>
+                <a href="#projects" @click="open = ! open"
+                  class="-mx-3 block rounded-lg px-3 py-2 font-medium leading-7 hover:bg-gray-50">Projects</a>
+                <a href="#skills" @click="open = ! open"
+                  class="-mx-3 block rounded-lg px-3 py-2 font-medium leading-7 hover:bg-gray-50">Skills</a>
+                <a href="#about" @click="open = ! open"
+                  class="-mx-3 block rounded-lg px-3 py-2 font-medium leading-7 hover:bg-gray-50">About Me</a>
+                <a href="#contact" @click="open = ! open"
+                  class="-mx-3 block rounded-lg px-3 py-2 font-medium leading-7 hover:bg-gray-50">Contact</a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </main>
-    <!-- Footer -->
-    <footer
-      class="mt-20 mb-52 container"
-      x-data="{ year: new Date().getFullYear() }"
-    >
-      <span class="w-full block h-[1px] bg-gray-400"></span>
+    </nav>
+  </header>
+  <!-- Main content section -->
+  <main class="container mt-16">
+    <!-- Hero section -->
+    <div class="relative mr-2">
+      <span class="custom-shadow bg-pastel-purple-shadow"></span>
       <div
-        class="flex flex-col lg:flex-row justify-between items-center gap-8 mt-8 lg:mt-4"
-      >
-        <div>
-          <p class="text-lg font-light">
-            &copy; <span x-text="year"></span> Virgil Jones
+        class="flex flex-col lg:flex-row justify-center items-center gap-8 lg:gap-14 rounded-large bg-pastel-purple px-8 pt-8 pb-12 lg:px-16 lg:pt-16 lg:pb-20 relative z-10 drop-shadow-sm">
+        <div class="lg:w-1/2 w-full">
+          <p class="text-left lg:text-right text-xl xl:text-2xl font-extralight mr-3">
+            hi my name is
           </p>
-          <p class="text-lg font-light">All rights reserved</p>
+          <h1 class="uppercase text-left lg:text-right my-4 tracking-widest text-3xl lg:text-5xl xl:text-7xl">
+            Virgil Jones
+          </h1>
+          <p class="text-left lg:text-right text-xl xl:text-2xl font-extralight mr-3">
+            aspiring full stack developer
+          </p>
         </div>
-        <div class="flex gap-3">
-          <a href="https://github.com/vejtheguy" target="_blank">
-            <i
-              class="fa-brands fa-github fa-2xl text-gray-500 hover:text-pastel-hot-pink transition cursor-pointer"
-            ></i>
-          </a>
-          <a href="https://codepen.io/vejtheguy" target="_blank"
-            ><i
-              class="fa-brands fa-codepen fa-2xl text-gray-500 hover:text-pastel-hot-pink transition cursor-pointer"
-            ></i
-          ></a>
-          <a
-            href="https://www.linkedin.com/in/virgil-elliot-jones/"
-            target="_blank"
-          >
-            <i
-              class="fa-brands fa-linkedin-in fa-2xl text-gray-500 hover:text-pastel-hot-pink transition cursor-pointer"
-            ></i>
-          </a>
-          <a href="mailto:vejtheguy48@gmail.com" target="_blank">
-            <i
-              class="fa-regular fa-envelope fa-2xl text-gray-500 hover:text-pastel-hot-pink transition cursor-pointer"
-            ></i>
-          </a>
-          <a href="https://twitter.com/aworthlessgamer" target="_blank">
-            <i
-              class="fa-brands fa-x-twitter fa-2xl text-gray-500 hover:text-pastel-hot-pink transition cursor-pointer"
-            ></i>
-          </a>
-          <a href="https://instagram.com/vejtheguy" target="_blank">
-            <i
-              class="fa-brands fa-instagram fa-2xl text-gray-500 hover:text-pastel-hot-pink transition cursor-pointer"
-            ></i>
-          </a>
+        <div class="lg:w-1/2 w-full relative">
+          <span class="custom-shadow bg-pastel-purple-shadow"></span>
+          <img src="./imgs/virgil-jones-portfolio-img-1.jpg" alt="Photo of Virgil holding his dog Payton"
+            class="custom-img" />
         </div>
       </div>
-    </footer>
-    <script>
-      window.onload = function () {
-        // Reset the form fields when the page loads
-        document.getElementById("form").reset();
-      };
-    </script>
-    <script src="javascript/date_fns.min.js"></script>
-    <script src="javascript/sandbox.js"></script>
-  </body>
+    </div>
+    <!-- Project section -->
+    <div id="projects" class="mt-40 mr-2 anchor-offset">
+      <h2 class="uppercase text-5xl mb-28">Projects</h2>
+      <div class="flex justify-between gap-28 flex-col lg:flex-row">
+        <!-- Project wrapper | Hotel Serenity -->
+        <section class="w-full lg:w-1/3 flex flex-col">
+          <a href="https://hotelserenityblueprint.my.canva.site/" target="_blank"
+            class="relative mb-12 group hover:scale-105 duration-300 after:content-[''] after:rounded-large after:w-full after:h-full after:-z-10 after:absolute after:-right-3 after:-bottom-3 after:bg-pastel-orange-shadow">
+            <span
+              class="opacity-0 group-hover:opacity-100 w-full h-full absolute rounded-large bg-white bg-opacity-40 font-bold text-2xl z-20 top-0 flex flex-col justify-center items-center gap-4 duration-700 delay-100">Hotel
+              Serenity
+              <span class="text-sm">try the demo site</span></span>
+            <img src="./imgs/hotel-serenity-demo-site.jpg" alt="Screenshot of demo website called Hotel Serenity"
+              class="custom-img object-cover" />
+          </a>
+          <h3 class="text-xl font-medium">Hotel Serenity - Canva</h3>
+          <p class="text-lg font-light my-4">
+            A sample layout for a luxurious hotel website, designed in Canva.
+          </p>
+          <a href="https://hotelserenityblueprint.my.canva.site/" target="_blank"
+            class="text-sm font-medium mt-auto w-fit hover:text-pastel-hot-pink duration-300">view demo site</a>
+        </section>
+        <!-- Project wrapper | Pawsome Adoptions -->
+        <section class="w-full lg:w-1/3 flex flex-col">
+          <a href="https://vejtheguy.github.io/pawsome-adoptions/" target="_blank"
+            class="relative mb-12 group hover:scale-105 duration-300 after:content-[''] after:rounded-large after:w-full after:h-full after:-z-10 after:absolute after:-right-3 after:-bottom-3 after:bg-pastel-blue-shadow">
+            <span
+              class="opacity-0 group-hover:opacity-100 w-full h-full absolute rounded-large bg-white bg-opacity-40 font-bold text-2xl z-20 top-0 flex flex-col justify-center items-center gap-4 duration-700 delay-100">Pawsome
+              Adoptions
+              <span class="text-sm">try the demo site</span></span>
+            <img src="./imgs/pawsome-adoption-demo-site.jpg" alt="Screenshot of demo website called Pawsome Adoptions"
+              class="custom-img object-cover" />
+          </a>
+          <h3 class="text-xl font-medium">Pawsome Adoptions - ReactJS</h3>
+          <p class="text-lg font-light my-4">
+            A sample dog adoption website built with ReactJS and API
+            integration.
+          </p>
+          <a href="https://vejtheguy.github.io/pawsome-adoptions/" target="_blank"
+            class="text-sm font-medium mt-auto w-fit hover:text-pastel-hot-pink duration-300">view demo site</a>
+        </section>
+        <!-- Project wrapper | Odin's Recipe Realm -->
+        <section class="w-full lg:w-1/3 flex flex-col">
+          <a href="https://vejtheguy.github.io/odin-recipes/" target="_blank"
+            class="relative mb-12 group hover:scale-105 duration-300 after:content-[''] after:rounded-large after:w-full after:h-full after:-z-10 after:absolute after:-right-3 after:-bottom-3 after:bg-pastel-green-shadow">
+            <span
+              class="opacity-0 group-hover:opacity-100 w-full h-full absolute rounded-large bg-white bg-opacity-40 font-bold text-2xl z-20 top-0 flex flex-col justify-center items-center gap-4 duration-700 delay-100">Odin's
+              Recipe Realm
+              <span class="text-sm">try the demo site</span></span>
+            <img src="./imgs/recipe-realm-demo-site.jpg" alt="Screenshot of demo website called Odin's Recipe Realm"
+              class="custom-img object-cover" />
+          </a>
+          <h3 class="text-xl font-medium">Recipe Realm - HTML/CSS</h3>
+          <p class="text-lg font-light my-4">
+            A sample recipe website designed using HTML and CSS.
+          </p>
+          <a href="https://vejtheguy.github.io/odin-recipes/" target="_blank"
+            class="text-sm font-medium mt-auto w-fit hover:text-pastel-hot-pink duration-300">view demo site</a>
+        </section>
+      </div>
+    </div>
+    <!-- Skills section -->
+    <div id="skills" class="mt-16 mr-2 anchor-offset">
+      <h2 class="uppercase text-5xl mb-28">Skills</h2>
+      <div class="flex justify-between gap-20 flex-col lg:flex-row">
+        <!-- Skill wrapper | Responsive web design -->
+        <div class="w-full lg:w-1/3 relative">
+          <span class="custom-shadow bg-pastel-green-shadow"></span>
+          <div
+            class="flex flex-col h-full justify-start gap-12 rounded-large bg-pastel-green p-8 relative z-10 drop-shadow-sm">
+            <div class="relative mr-2">
+              <img src="./imgs/responsive-web-demo-img.jpg" alt="Image displaying different screen sizes"
+                class="custom-img object-cover w-full h-[300px] lg:h-[225px]" />
+              <span class="custom-shadow bg-pastel-green-shadow"></span>
+            </div>
+            <div>
+              <h3 class="text-lg xl:text-xl font-medium">
+                Responsive Web Design
+              </h3>
+              <p class="text-md xl:text-lg font-light mt-6">
+                Creating responsive websites that prioritize a seamless user
+                experience across all devices, ensuring accessibility, ease of
+                use, and optimal performance.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Skill wrapper | CSS styling and frameworks -->
+        <div class="w-full lg:w-1/3 relative">
+          <span class="custom-shadow bg-pastel-purple-shadow"></span>
+          <div
+            class="flex flex-col h-full justify-start gap-12 rounded-large bg-pastel-purple p-8 relative z-10 drop-shadow-sm">
+            <div class="relative mr-2">
+              <div class="frame h-[300px] lg:h-[225px] rounded-large">
+                <div class="circle">
+                  <span class="sun"></span>
+                  <span class="moon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                      <path
+                        d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z" />
+                    </svg>
+                  </span>
+                  <span class="sky"></span>
+                  <ul class="stars">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                  </ul>
+                  <span class="pyramid"></span>
+                  <span class="ground"></span>
+                </div>
+              </div>
+              <span class="custom-shadow bg-pastel-purple-shadow -z-10"></span>
+            </div>
+            <div>
+              <h3 class="text-lg xl:text-xl font-medium">
+                CSS Styling and Frameworks
+              </h3>
+              <p class="text-md xl:text-lg font-light mt-6">
+                Styling webpages with CSS, Tailwind CSS, and Bootstrap,
+                incorporating artistic elements to enhance visual appeal and
+                functionality.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Skill wrapper | Javascript frameworks -->
+        <div class="w-full lg:w-1/3 relative">
+          <span class="custom-shadow bg-pastel-orange-shadow"></span>
+          <div
+            class="flex flex-col h-full justify-start gap-12 rounded-large bg-pastel-orange p-8 relative z-10 drop-shadow-sm">
+            <div class="relative mr-2">
+              <div
+                class="bg-teal-100 h-[300px] lg:h-[225px] gap-4 flex flex-col items-center justify-center rounded-large">
+                <div class="day text-2xl flex items-center justify-center tracking-widest"></div>
+                <div class="clock flex items-center justify-center gap-1 mx-2"></div>
+                <div class="month flex items-center justify-center text-xl"></div>
+              </div>
+              <span class="custom-shadow bg-pastel-orange-shadow -z-10"></span>
+            </div>
+            <div>
+              <h3 class="text-lg xl:text-xl font-medium">
+                JavaScript Frameworks
+              </h3>
+              <p class="text-md xl:text-lg font-light mt-6">
+                Continuously expanding my JavaScript and framework knowledge
+                to enhance web functionality and user interaction.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- About me section -->
+    <div id="about" class="mt-16 mr-2 anchor-offset">
+      <h2 class="uppercase text-5xl mb-28">About Me</h2>
+      <div class="relative mr-2">
+        <span class="custom-shadow bg-pastel-yellow-shadow"></span>
+        <div
+          class="flex flex-col lg:flex-row justify-center items-center gap-12 lg:gap-20 rounded-large bg-pastel-yellow px-8 pt-8 pb-12 lg:px-16 lg:pt-16 lg:pb-20 relative z-10 drop-shadow-sm">
+          <div class="lg:w-1/2 w-full relative">
+            <span class="custom-shadow bg-pastel-yellow-shadow"></span>
+            <img src="./imgs/virgil-jones-glassblowing.jpg" alt="Photo of Virgil glassblowing making a glass goblet"
+              class="custom-img object-cover lg:h-[400px]" />
+          </div>
+          <div class="lg:w-1/2 w-full flex flex-col gap-6 lg:gap-10">
+            <p class="leading-8 xl:leading-9 text-left text-xl xl:text-2xl font-extralight">
+              I'm a <span class="font-normal">former glassblower</span> turned
+              <span class="font-normal">computer science student</span>. My
+              passion is to
+              <span class="font-normal">create web applications</span> that
+              provide easy <span class="font-normal">user experiences</span>.
+            </p>
+            <p class="leading-8 xl:leading-9 text-left text-xl xl:text-2xl font-extralight">
+              When I'm not coding, you'll find me
+              <span class="font-normal">gaming</span> or watching
+              <span class="font-normal">horror films</span> with my friends. I
+              also enjoy
+              <span class="font-normal">fire-related hobbies</span> and
+              crafting with my hands, including
+              <span class="font-normal">woodworking</span>,
+              <span class="font-normal">knife making</span>,
+              <span class="font-normal">silversmithing</span>, and
+              <span class="font-normal">glassblowing</span>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Get in contact section -->
+    <div id="contact" class="mt-16 mr-2 anchor-offset">
+      <h2 class="uppercase text-5xl mb-28">Get in Contact</h2>
+      <div class="flex flex-col lg:flex-row gap-20">
+        <div class="lg:w-1/2 w-full flex flex-col gap-6 lg:gap-10">
+          <p class="leading-8 xl:leading-9 text-left lg:text-right text-xl xl:text-2xl font-extralight">
+            <span class="font-normal">Feel free to connect!</span> Find more
+            of me on <span class="font-normal">social media</span> or
+            <span class="font-normal">contact me directly</span>. I'm always
+            excited for <span class="font-normal">new opportunities</span>,
+            <span class="font-normal">projects</span>, and
+            <span class="font-normal">collaborations</span>.
+          </p>
+        </div>
+        <form class="lg:w-1/2 w-full flex flex-col" action="https://api.web3forms.com/submit" method="post">
+          <input type="hidden" name="access_key" value="cce666be-fc14-4151-a24b-678d5f16b4b6" />
+          <input type="hidden" name="subject" value="Portfolio Website Contact Submission" />
+          <input type="hidden" name="from_name" value="Contact.Portfolio" />
+          <label for="name" class="mb-2 text-lg flex justify-between items-end cursor-pointer">Name:<span
+              class="text-pastel-hot-pink font-medium text-xs mr-2">required*</span>
+          </label>
+          <div class="relative h-12 mb-8 mr-2">
+            <span class="w-full h-full absolute -right-3 -bottom-3 drop-shadow bg-pastel-blue-shadow"></span>
+            <input type="text" name="name" id="name" required placeholder="Jane Smith"
+              class="relative w-full h-12 px-4 bg-pastel-blue text-lg outline-pastel-hot-pink" />
+          </div>
+          <label for="email" class="mb-2 text-lg flex justify-between items-end cursor-pointer">Email:<span
+              class="text-pastel-hot-pink font-medium text-xs mr-2">required*</span></label>
+          <div class="relative h-12 mb-8 mr-2">
+            <span class="w-full h-full absolute -right-3 -bottom-3 drop-shadow bg-pastel-blue-shadow"></span>
+            <input type="email" name="email" id="email" required placeholder="jane.smith@example.com"
+              class="relative w-full h-12 px-4 bg-pastel-blue text-lg outline-pastel-hot-pink" />
+          </div>
+          <label for="message" class="mb-2 text-lg flex justify-between items-end cursor-pointer">Message:<span
+              class="text-pastel-hot-pink font-medium text-xs mr-2">required*</span></label>
+          <div class="relative h-36 mb-8 mr-2">
+            <span class="w-full h-full absolute -right-3 -bottom-3 drop-shadow bg-pastel-blue-shadow"></span>
+            <textarea id="message" name="message" placeholder="Type your message here..." required
+              class="relative w-full max-h-36 min-h-36 p-4 bg-pastel-blue text-lg outline-pastel-hot-pink"></textarea>
+          </div>
+          <input type="hidden" name="redirect" value="https://vejtheguy.github.io/portfolio/pages/thank-you.html" />
+          <input type="checkbox" name="botcheck" id="botcheck" class="hidden" />
+          <button type="submit" data-callback="onSubmit"
+            class="rounded-full relative w-1/4 mr-2 self-end bg-pastel-green p-4 text-xl font-light shadow-sm hover:bg-pastel-purple transition duration-300 after:transition after:duration-300 after:content-[''] after:rounded-full after:w-full after:h-full after:-z-10 after:absolute after:-right-3 after:-bottom-3 after:bg-pastel-green-shadow after:hover:bg-pastel-purple-shadow">
+            send
+          </button>
+        </form>
+      </div>
+    </div>
+  </main>
+  <!-- Footer -->
+  <footer class="mt-20 mb-52 container" x-data="{ year: new Date().getFullYear() }">
+    <span class="w-full block h-[1px] bg-gray-400"></span>
+    <div class="flex flex-col lg:flex-row justify-between items-center gap-8 mt-8 lg:mt-4">
+      <div>
+        <p class="text-lg font-light">
+          &copy; <span x-text="year"></span> Virgil Jones
+        </p>
+        <p class="text-lg font-light">All rights reserved</p>
+      </div>
+      <div class="flex gap-3">
+        <a href="https://github.com/vejtheguy" target="_blank">
+          <i class="fa-brands fa-github fa-2xl text-gray-500 hover:text-pastel-hot-pink transition cursor-pointer"></i>
+        </a>
+        <a href="https://codepen.io/vejtheguy" target="_blank"><i
+            class="fa-brands fa-codepen fa-2xl text-gray-500 hover:text-pastel-hot-pink transition cursor-pointer"></i></a>
+        <a href="www.linkedin.com/in/virgilejones" target="_blank">
+          <i
+            class="fa-brands fa-linkedin-in fa-2xl text-gray-500 hover:text-pastel-hot-pink transition cursor-pointer"></i>
+        </a>
+        <a href="mailto:vejtheguy48@gmail.com" target="_blank">
+          <i
+            class="fa-regular fa-envelope fa-2xl text-gray-500 hover:text-pastel-hot-pink transition cursor-pointer"></i>
+        </a>
+        <a href="https://twitter.com/aworthlessgamer" target="_blank">
+          <i
+            class="fa-brands fa-x-twitter fa-2xl text-gray-500 hover:text-pastel-hot-pink transition cursor-pointer"></i>
+        </a>
+        <a href="https://instagram.com/vejtheguy" target="_blank">
+          <i
+            class="fa-brands fa-instagram fa-2xl text-gray-500 hover:text-pastel-hot-pink transition cursor-pointer"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+  <script>
+    window.onload = function () {
+      // Reset the form fields when the page loads
+      document.getElementById("form").reset();
+    };
+  </script>
+  <script src="javascript/date_fns.min.js"></script>
+  <script src="javascript/sandbox.js"></script>
+</body>
+
 </html>

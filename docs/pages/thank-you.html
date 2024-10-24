@@ -1,244 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Thank You Page - Virgil Jones - Web Development Portfolio</title>
-    <link rel="stylesheet" href="../style.css" />
-    <script src="//unpkg.com/alpinejs" defer></script>
-    <script
-      src="https://kit.fontawesome.com/77835667ac.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
-  <body
-    class="bg-pastel-pink font-custom text-pastel-gray tracking-widest flex flex-col min-h-screen"
-  >
-    <!-- Main navigation -->
-    <header class="sticky top-0 z-50">
-      <nav
-        class="container flex items-center justify-between py-6 bg-pastel-pink"
-        x-data="{ open: false }"
-      >
-        <a
-          href="../index.html"
-          class="-m-1.5 p-1.5 hover:text-pastel-hot-pink transition"
-        >
-          <span class="uppercase text-xl tracking-widest">Virgil Jones</span>
-        </a>
-        <div class="flex lg:hidden">
-          <button
-            @click="open = ! open"
-            type="button"
-            class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5"
-          >
-            <span class="sr-only">Open main menu</span>
-            <svg
-              class="h-6 w-6"
-              :class="open ? 'hidden' : 'block'"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              aria-hidden="true"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-              />
-            </svg>
-          </button>
-        </div>
-        <div class="hidden lg:flex lg:gap-x-10">
-          <a
-            href="./resume.html"
-            class="text-md hover:text-pastel-hot-pink transition"
-            >Resume</a
-          >
-          <a
-            href="../index.html#projects"
-            class="text-md hover:text-pastel-hot-pink transition"
-            >Projects</a
-          >
-          <a
-            href="../index.html#skills"
-            class="text-md hover:text-pastel-hot-pink transition"
-            >Skills</a
-          >
-          <a
-            href="../index.html#about"
-            class="text-md hover:text-pastel-hot-pink transition"
-            >About Me</a
-          >
-          <a
-            href="../index.html#contact"
-            class="text-md hover:text-pastel-hot-pink transition"
-            >Contact</a
-          >
-        </div>
-        <!-- Mobile menu, show/hide based on menu open state. -->
-        <div x-show="open" class="lg:hidden">
-          <!-- Background backdrop, show/hide based on slide-over state. -->
-          <div class="fixed inset-0 z-10"></div>
-          <div
-            class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
-          >
-            <div class="flex items-center justify-between">
-              <a
-                href="../index.html"
-                class="-m-1.5 p-1.5"
-                @click="open = ! open"
-              >
-                <span class="uppercase text-xl tracking-widest"
-                  >Virgil Jones</span
-                >
-              </a>
-              <button
-                type="button"
-                @click="open = ! open"
-                class="-m-2.5 rounded-md p-2.5 text-gray-700"
-              >
-                <span class="sr-only">Close menu</span>
-                <svg
-                  class="h-6 w-6"
-                  :class="open ? 'block' : 'hidden'"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                </svg>
-              </button>
-            </div>
-            <div class="mt-6 flow-root">
-              <div class="-my-6">
-                <div class="space-y-2 py-6">
-                  <a
-                    href="./resume.html"
-                    @click="open = ! open"
-                    class="-mx-3 block rounded-lg px-3 py-2 font-medium leading-7 hover:bg-gray-50"
-                    >Resume</a
-                  >
-                  <a
-                    href="../index.html#projects"
-                    @click="open = ! open"
-                    class="-mx-3 block rounded-lg px-3 py-2 font-medium leading-7 hover:bg-gray-50"
-                    >Projects</a
-                  >
-                  <a
-                    href="../index.html#skills"
-                    @click="open = ! open"
-                    class="-mx-3 block rounded-lg px-3 py-2 font-medium leading-7 hover:bg-gray-50"
-                    >Skills</a
-                  >
-                  <a
-                    href="../index.html#about"
-                    @click="open = ! open"
-                    class="-mx-3 block rounded-lg px-3 py-2 font-medium leading-7 hover:bg-gray-50"
-                    >About Me</a
-                  >
-                  <a
-                    href="../index.html#contact"
-                    @click="open = ! open"
-                    class="-mx-3 block rounded-lg px-3 py-2 font-medium leading-7 hover:bg-gray-50"
-                    >Contact</a
-                  >
-                </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thank You Page - Virgil Jones - Web Development Portfolio</title>
+  <link rel="stylesheet" href="../style.css" />
+  <script src="//unpkg.com/alpinejs" defer></script>
+  <script src="https://kit.fontawesome.com/77835667ac.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="bg-pastel-pink font-custom text-pastel-gray tracking-widest flex flex-col min-h-screen">
+  <!-- Main navigation -->
+  <header class="sticky top-0 z-50">
+    <nav class="container flex items-center justify-between py-6 bg-pastel-pink" x-data="{ open: false }">
+      <a href="../index.html" class="-m-1.5 p-1.5 hover:text-pastel-hot-pink transition">
+        <span class="uppercase text-xl tracking-widest">Virgil Jones</span>
+      </a>
+      <div class="flex lg:hidden">
+        <button @click="open = ! open" type="button"
+          class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5">
+          <span class="sr-only">Open main menu</span>
+          <svg class="h-6 w-6" :class="open ? 'hidden' : 'block'" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+        </button>
+      </div>
+      <div class="hidden lg:flex lg:gap-x-10">
+        <a href="./resume.html" class="text-md hover:text-pastel-hot-pink transition">Resume</a>
+        <a href="../index.html#projects" class="text-md hover:text-pastel-hot-pink transition">Projects</a>
+        <a href="../index.html#skills" class="text-md hover:text-pastel-hot-pink transition">Skills</a>
+        <a href="../index.html#about" class="text-md hover:text-pastel-hot-pink transition">About Me</a>
+        <a href="../index.html#contact" class="text-md hover:text-pastel-hot-pink transition">Contact</a>
+      </div>
+      <!-- Mobile menu, show/hide based on menu open state. -->
+      <div x-show="open" class="lg:hidden">
+        <!-- Background backdrop, show/hide based on slide-over state. -->
+        <div class="fixed inset-0 z-10"></div>
+        <div
+          class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+          <div class="flex items-center justify-between">
+            <a href="../index.html" class="-m-1.5 p-1.5" @click="open = ! open">
+              <span class="uppercase text-xl tracking-widest">Virgil Jones</span>
+            </a>
+            <button type="button" @click="open = ! open" class="-m-2.5 rounded-md p-2.5 text-gray-700">
+              <span class="sr-only">Close menu</span>
+              <svg class="h-6 w-6" :class="open ? 'block' : 'hidden'" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+          <div class="mt-6 flow-root">
+            <div class="-my-6">
+              <div class="space-y-2 py-6">
+                <a href="./resume.html" @click="open = ! open"
+                  class="-mx-3 block rounded-lg px-3 py-2 font-medium leading-7 hover:bg-gray-50">Resume</a>
+                <a href="../index.html#projects" @click="open = ! open"
+                  class="-mx-3 block rounded-lg px-3 py-2 font-medium leading-7 hover:bg-gray-50">Projects</a>
+                <a href="../index.html#skills" @click="open = ! open"
+                  class="-mx-3 block rounded-lg px-3 py-2 font-medium leading-7 hover:bg-gray-50">Skills</a>
+                <a href="../index.html#about" @click="open = ! open"
+                  class="-mx-3 block rounded-lg px-3 py-2 font-medium leading-7 hover:bg-gray-50">About Me</a>
+                <a href="../index.html#contact" @click="open = ! open"
+                  class="-mx-3 block rounded-lg px-3 py-2 font-medium leading-7 hover:bg-gray-50">Contact</a>
               </div>
             </div>
           </div>
         </div>
-      </nav>
-    </header>
-    <!-- Main content section -->
-    <main
-      class="container mt-20 lg:mt-36 flex flex-col justify-center items-center flex-grow"
-    >
-      <i
-        class="fa-solid fa-envelope-circle-check fa-10x fa-bounce text-pastel-green-shadow"
-        style="--fa-animation-iteration-count: 1; --fa-animation-delay: 1000ms"
-      ></i>
-      <p class="font-normal text-lg mt-4 leading-8 text-center">
-        Message sent successfully!
-      </p>
-      <h1
-        class="uppercase text-center my-8 tracking-widest text-2xl lg:text-4xl xl:text-5xl"
-      >
-        Thank you for your message!
-      </h1>
-      <p class="font-normal text-lg leading-8 text-center">
-        The form has been submitted successfully.
-      </p>
-      <p class="font-normal text-lg leading-8 text-center">
-        Expect a reply from me soon!
-      </p>
-      <a href="../index.html">
-        <button
-          type="button"
-          class="rounded-full relative mr-2 mt-16 self-end bg-pastel-green px-6 py-4 text-xl font-light shadow-sm hover:bg-pastel-purple transition duration-300 after:transition after:duration-300 after:content-[''] after:rounded-full after:w-full after:h-full after:-z-10 after:absolute after:-right-3 after:-bottom-3 after:bg-pastel-green-shadow after:hover:bg-pastel-purple-shadow"
-        >
-          return to homepage
-        </button>
-      </a>
-    </main>
-    <!-- Footer -->
-    <footer
-      class="mt-20 mb-52 container"
-      x-data="{ year: new Date().getFullYear() }"
-    >
-      <span class="w-full block h-[1px] bg-gray-400"></span>
-      <div
-        class="flex flex-col lg:flex-row justify-between items-center gap-8 mt-8 lg:mt-4"
-      >
-        <div>
-          <p class="text-lg font-light">
-            &copy; <span x-text="year"></span> Virgil Jones
-          </p>
-          <p class="text-lg font-light">All rights reserved</p>
-        </div>
-        <div class="flex gap-3">
-          <a href="https://github.com/vejtheguy" target="_blank">
-            <i
-              class="fa-brands fa-github fa-2xl text-gray-500 hover:text-pastel-hot-pink transition cursor-pointer"
-            ></i>
-          </a>
-          <a href="https://codepen.io/vejtheguy" target="_blank"
-            ><i
-              class="fa-brands fa-codepen fa-2xl text-gray-500 hover:text-pastel-hot-pink transition cursor-pointer"
-            ></i
-          ></a>
-          <a
-            href="https://www.linkedin.com/in/virgil-elliot-jones/"
-            target="_blank"
-          >
-            <i
-              class="fa-brands fa-linkedin-in fa-2xl text-gray-500 hover:text-pastel-hot-pink transition cursor-pointer"
-            ></i>
-          </a>
-          <a href="mailto:vejtheguy48@gmail.com" target="_blank">
-            <i
-              class="fa-regular fa-envelope fa-2xl text-gray-500 hover:text-pastel-hot-pink transition cursor-pointer"
-            ></i>
-          </a>
-          <a href="https://twitter.com/aworthlessgamer" target="_blank">
-            <i
-              class="fa-brands fa-x-twitter fa-2xl text-gray-500 hover:text-pastel-hot-pink transition cursor-pointer"
-            ></i>
-          </a>
-          <a href="https://instagram.com/vejtheguy" target="_blank">
-            <i
-              class="fa-brands fa-instagram fa-2xl text-gray-500 hover:text-pastel-hot-pink transition cursor-pointer"
-            ></i>
-          </a>
-        </div>
       </div>
-    </footer>
-  </body>
+    </nav>
+  </header>
+  <!-- Main content section -->
+  <main class="container mt-20 lg:mt-36 flex flex-col justify-center items-center flex-grow">
+    <i class="fa-solid fa-envelope-circle-check fa-10x fa-bounce text-pastel-green-shadow"
+      style="--fa-animation-iteration-count: 1; --fa-animation-delay: 1000ms"></i>
+    <p class="font-normal text-lg mt-4 leading-8 text-center">
+      Message sent successfully!
+    </p>
+    <h1 class="uppercase text-center my-8 tracking-widest text-2xl lg:text-4xl xl:text-5xl">
+      Thank you for your message!
+    </h1>
+    <p class="font-normal text-lg leading-8 text-center">
+      The form has been submitted successfully.
+    </p>
+    <p class="font-normal text-lg leading-8 text-center">
+      Expect a reply from me soon!
+    </p>
+    <a href="../index.html">
+      <button type="button"
+        class="rounded-full relative mr-2 mt-16 self-end bg-pastel-green px-6 py-4 text-xl font-light shadow-sm hover:bg-pastel-purple transition duration-300 after:transition after:duration-300 after:content-[''] after:rounded-full after:w-full after:h-full after:-z-10 after:absolute after:-right-3 after:-bottom-3 after:bg-pastel-green-shadow after:hover:bg-pastel-purple-shadow">
+        return to homepage
+      </button>
+    </a>
+  </main>
+  <!-- Footer -->
+  <footer class="mt-20 mb-52 container" x-data="{ year: new Date().getFullYear() }">
+    <span class="w-full block h-[1px] bg-gray-400"></span>
+    <div class="flex flex-col lg:flex-row justify-between items-center gap-8 mt-8 lg:mt-4">
+      <div>
+        <p class="text-lg font-light">
+          &copy; <span x-text="year"></span> Virgil Jones
+        </p>
+        <p class="text-lg font-light">All rights reserved</p>
+      </div>
+      <div class="flex gap-3">
+        <a href="https://github.com/vejtheguy" target="_blank">
+          <i class="fa-brands fa-github fa-2xl text-gray-500 hover:text-pastel-hot-pink transition cursor-pointer"></i>
+        </a>
+        <a href="https://codepen.io/vejtheguy" target="_blank"><i
+            class="fa-brands fa-codepen fa-2xl text-gray-500 hover:text-pastel-hot-pink transition cursor-pointer"></i></a>
+        <a href="www.linkedin.com/in/virgilejones" target="_blank">
+          <i
+            class="fa-brands fa-linkedin-in fa-2xl text-gray-500 hover:text-pastel-hot-pink transition cursor-pointer"></i>
+        </a>
+        <a href="mailto:vejtheguy48@gmail.com" target="_blank">
+          <i
+            class="fa-regular fa-envelope fa-2xl text-gray-500 hover:text-pastel-hot-pink transition cursor-pointer"></i>
+        </a>
+        <a href="https://twitter.com/aworthlessgamer" target="_blank">
+          <i
+            class="fa-brands fa-x-twitter fa-2xl text-gray-500 hover:text-pastel-hot-pink transition cursor-pointer"></i>
+        </a>
+        <a href="https://instagram.com/vejtheguy" target="_blank">
+          <i
+            class="fa-brands fa-instagram fa-2xl text-gray-500 hover:text-pastel-hot-pink transition cursor-pointer"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+</body>
+
 </html>
